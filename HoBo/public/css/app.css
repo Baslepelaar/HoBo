@@ -1,4 +1,11 @@
-
+.bg-white {
+    --tw-bg-opacity: 1;
+    background-color: #2f3136;
+}
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: #202225;
+}
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -855,14 +862,6 @@ select {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: #2f3136;
-}
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: #202225;
 }
 .bg-gray-800 {
   --tw-bg-opacity: 1;
