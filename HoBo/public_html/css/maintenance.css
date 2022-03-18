@@ -1,0 +1,66 @@
+/*!
+ * Copyright (c) 2017 Netixy Development
+ */
+
+/* HTML, Body */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0px;
+	background-color: grey;
+	width: 100%;
+    min-height: 100%;
+}
+/* HTML, Body End */
+
+/* Main */
+.maintenance-content {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+}
+.maintenance-center {
+    position: absolute;
+    top: 30%;
+    width:100%;
+}
+.maintenance-footer {
+    background-color: none;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 3rem;
+}
+.content {
+    display: flex;
+    color: white;
+    padding: none; 
+	height: 100%;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	color: #eaeaea;
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+/* Main End */
