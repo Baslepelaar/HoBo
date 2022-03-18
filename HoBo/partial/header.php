@@ -4,7 +4,7 @@
       <meta charset= "utf-8">
       <meta http-equiv="language" content="NL">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="author" content="Maikel Braas">
+      <meta name="author" content="Bas, William, Mathieu">
       <meta name="keywords" content="html,css-- mijn eigen website">
       <title>Ra site</title>
       <link rel="stylesheet" href="css/global.css">
