@@ -47,32 +47,6 @@ main{
 	min-height: 100vh;
 }
 
-footer{
-	display: flex;
-	justify-content: space-around;
-	background-color: #272d77;
-}
-
-footer a{
-	text-decoration: none;
-	color: black;
-}
-
-footer a:hover{
-	color: #c1c1c1;
-}
-
-.footer-content h1{
-	text-align: center;
-	color: white;
-	margin-bottom: 30px;
-}
-
-.footer-content{
-	width: 14%;
-	padding:  0 2% 4%;
-}
-
 .pages{
 	display: flex;
 	margin-top: auto;
