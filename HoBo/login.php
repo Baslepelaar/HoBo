@@ -13,8 +13,8 @@ if(isset($_POST['login'])){
     <main>
     	<section class="form">
 	    	<form method="post">
-	    		<label for="voornaam" id="voornaam">Voornaam: </label>
-	    		<input type="text" name="voornaam" required>
+	    		<label for="email" id="email">Email: </label>
+	    		<input type="email" name="email" required>
 	    		<label for="password">Wachtwoord: </label>
 	    		<input type="password" name="password" required>
 	    		<input type="submit" name="login" value="Login">

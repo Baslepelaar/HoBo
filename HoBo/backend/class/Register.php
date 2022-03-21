@@ -11,14 +11,14 @@
                 }
                 $passwordEncrypt = password_hash($data['password'], PASSWORD_BCRYPT, ['cost' => 12]);
 
-                $sql = "INSERT INTO users (Voornaam, Tussenvoegsel, Achternaam, Email, Password) VALUES (:Voornaam, :Tussenvoegsel, :Achternaam, :Email, :Password)";
+                $sql = "INSERT INTO users (Voornaam, Tussenvoegsel, Achternaam, Email, Password, Ip) VALUES (:Voornaam, :Tussenvoegsel, :Achternaam, :Email, :Password, :Ip)";
                 $stmt = $this->connect()->prepare($sql);
                 $stmt->bindParam(":Voornaam", $data['voornaam']);
                 $stmt->bindParam(":Tussenvoegsel", $data['tussenvoegsel']);
                 $stmt->bindParam(":Achternaam", $data['achternaam']);
                 $stmt->bindParam(":Email", $data['email']);
                 $stmt->bindParam(":Password", $passwordEncrypt);
-//                $stmt->bindParam(":Ip", $this->ipaddress);
+                $stmt->bindParam(":Ip", $this->get_client_ip());
                 if($stmt->execute()) {
                     header("Location: login.php");
                 }
