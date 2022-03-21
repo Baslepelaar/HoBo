@@ -1,5 +1,5 @@
 <?php
-require_once 'partial/header.php';
+require_once 'partial/header2.php';
 ?>
     <main>
       <section class="content">
