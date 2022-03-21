@@ -4,7 +4,7 @@ require_once 'partial/header.php';
     <main>
       <section class="content">
         <article class="info">
-
+          <p>dit is wat text</p>
         </article>
         <article class="info">
           

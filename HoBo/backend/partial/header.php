@@ -21,10 +21,10 @@
     <section class="container">
       <div id="sidebar">
         <span>
-          <h2>Gebruikers</h2>
-            <a href="">Gebruikers</a>
-            <h2>Post</h2>
-            <a href="">Add Post</a>
-            <a href="p">Posts</a>
+            <a href="index.php"><img src="img/home.png"></a>
+            <a href="blog.php?page=1"><img src="img/pop512.png"></a>
+            <a href="producten.php?page=1"><img src="img/vergroot512.png"></a>
+            <a href="overons.php"><img src="img/tijd512.png"></a>
+            <a href="contact.php"></a>
           </span>
       </div>
