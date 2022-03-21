@@ -15,36 +15,35 @@
 
   </head>
   <body>
+  <img src="img/logo.png" class="logoHeader">
     <header>
-      <img src="img/logo.png" class="logoHeader">
       <div class="d-flex flex-column flex-shrink-0 align-items-center" >
-        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-          <li class="nav-item">
+        <ul class="nav nav-pills nav-fill flex-column mb-auto text-center">
+          <li class="nav-item btn-sm">
             <a href="#" class="nav-link active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
             <div class="align-items-center"><img src="img/home.png" style="height: 2rem;"></div>
             </a>
           </li>
-          <li>
+          <li class="btn-sm">
             <a href="#" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
             <div><img src="img/pop512.png" style="height: 2rem;"></div>
             </a>
           </li>
-          <li>
+          <li class="btn-sm">
             <a href="#" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
             <div><img src="img/vergroot512.png" style="height: 2rem;"></div>
             </a>
           </li>
-          <li>
+          <li class="btn-sm">
             <a href="#" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
             <div><img src="img/tijd512.png" style="height: 2rem; justify-content: center;"></div>
             </a>
           </li>
-          <li>
+          <li class="btn-sm">
             <a href="#" class="nav-link" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
               <svg class="bi" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg>
             </a>
           </li>
         </ul>
       </div>
-
     </header>
