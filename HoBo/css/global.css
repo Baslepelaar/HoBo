@@ -1,5 +1,5 @@
 *{
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: 'Kumbh Sans', sans-serif;
 }
 
 html, body{
@@ -28,7 +28,6 @@ nav{
 	justify-content: center;
 }
 
-
 nav a{
 	align-self: center;
 	text-decoration: none;
@@ -38,6 +37,14 @@ nav a{
 
 nav a:hover{
 	background-color: mediumblue;
+}
+
+footer {
+	background-color: #528776;
+}
+
+footer h5{
+	font-weight: bold;
 }
 
 main{

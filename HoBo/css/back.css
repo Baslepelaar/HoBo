@@ -36,7 +36,7 @@ header img{
 	display: flex;
 	flex-direction: column;
 	min-height: 90vh;
-	max-height: ;
+	max-height: 10;
 	background-color: #272d77;
 	width: 20%;
 	min-width: 80px;
