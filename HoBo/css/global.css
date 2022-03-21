@@ -2,6 +2,19 @@
 	font-family: 'Kumbh Sans', sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 1vw;
+}
+   
+::-webkit-scrollbar-thumb {
+	background: #276955; 
+	border-radius: 2vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #348d72; 
+}
+
 html, body{
 	margin: 0;
 	padding: 0;
@@ -29,17 +42,21 @@ nav a{
 	color: white;
 	padding: 1% 2%;
 }
+
 .logoHeader{
 	margin-left: 0.05rem;
-
 }
 
-/* #corners {
+ #corners {
 	border-radius: 10px;
-} */
+} 
+
+.logo img {
+	justify-content: end;
+}
 
 footer {
-	background-color: #528776;
+	background-color: #0c0c0c;
 }
 
 footer h5{
