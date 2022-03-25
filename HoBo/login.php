@@ -1,15 +1,37 @@
 <?php
-require_once 'partial/header.php';
-require_once 'backend/class/Login.php';
+    require_once 'partial/header.php';
+    require_once 'backend/class/Login.php';
 
-$userIns = new Login();
+    $is_online = new Online();
 
-if(isset($_POST['login'])){
-    $userIns->login($_POST);
-}
+    $online = $is_online->getIs_online();
+    $banned = false;
+    if($online) {
+        $banned = true;
+    }
+    if($banned) {
+        header('Location: index.php');
+    }
+
+    $ip = new IP();
+
+    $getip = $ip->get_client_ip();
+
+    $ip->addIPtoList($getip);
+    if($ip->isIPBanned($getip)) {
+        header('Location: https://google.com');
+    }
+
+    $userIns = new Login();
+
+    if(isset($_POST['login'])){
+        $userIns->login($_POST);
+    }
+
 	
 ?>
 
+    <?php include('backend/alert.php'); ?>
     <main>
     	<section class="form">
 	    	<form method="post">

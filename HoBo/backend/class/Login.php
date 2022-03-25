@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Register.php';
+require_once 'Online.php';
 
-class Login extends DBConfig {
+class Login extends Online {
 
     public function getUser($email) {
         $sql = "SELECT Password, Email, KlantNr FROM users WHERE Email = :Email";
@@ -15,19 +15,21 @@ class Login extends DBConfig {
     public function login($data) {
         try {
             $user = $this->getUser($data['email']);
+//            die(var_dump($user));
             if(!$user) {
-                throw new Exception("Gebruiker bestaat niet.");
+                header("Location: login.php?login=danger");
+                throw new Exception("Danger");
             }
-           // var_dump($data);
             if(!password_verify($data['password'], $user->Password)) {
-                throw new Exception("Wachtwoord is incorrect.");
+                header("Location: login.php?login=danger");
+                throw new Exception("Danger");
             }
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $user->email;
-            header("Location: backend/admin.php");
+            header("Location: index.php?login=success");
         } catch(Exception $e) {
-            echo $e->getMessage();
+            return $e->getMessage();
         }
     }
 }

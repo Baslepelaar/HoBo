@@ -33,6 +33,7 @@
 
 ?>
 
+    <?php include('backend/alert.php'); ?>
     <main>
     	<section class="form">
 	    	<form method="post">
