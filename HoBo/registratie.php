@@ -16,7 +16,7 @@
 
     $Register = new Register();
 
-    $User = $Register->getUsers();
+    $User = $Register->getUser();
     var_dump($User);
     if(isset($_POST['register'])) {
         $Register->create($_POST);
@@ -33,6 +33,7 @@
 
 ?>
 
+    <?php include('backend/alert.php'); ?>
     <main>
     	<section class="form">
 	    	<form method="post">

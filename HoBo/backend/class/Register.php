@@ -18,7 +18,7 @@
                 $stmt->bindParam(":Achternaam", $data['achternaam']);
                 $stmt->bindParam(":Email", $data['email']);
                 $stmt->bindParam(":Password", $passwordEncrypt);
-                $stmt->bindParam(":Ip", $this->ipaddress);
+                $stmt->bindParam(":Ip", $this->get_client_ip());
                 if($stmt->execute()) {
                     header("Location: login.php");
                 }
@@ -27,8 +27,8 @@
             }
         } 
 
-        public function getUsers() {
-            $sql = "SELECT KlantNr, Voornaam FROM users";
+        public function getUser() {
+            $sql = "SELECT KlantNr, Voornaam, Password FROM users";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_OBJ);
