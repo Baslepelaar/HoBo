@@ -5,9 +5,9 @@
     class Online extends IP {
 
         public function getIs_online(){
-            if(!empty($_SESSION['KlantNr'])){
+            if(!empty($_SESSION['klantnr'])){
     
-                $sql = "SELECT * FROM `users` WHERE `KlantNr`='".$_SESSION['KlantNr']."' AND `Banned`='0'";
+                $sql = "SELECT * FROM `users` WHERE `KlantNr`='".$_SESSION['klantnr']."' AND `Banned`='0'";
                 $result = connection()->query($sql);
     
                 if($result->num_rows > 0){
