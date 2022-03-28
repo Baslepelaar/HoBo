@@ -66,7 +66,7 @@
         <h5 class="text-uppercase" style="font-size: 1.5rem; color: grey;">Contact</h5>
         <ul class="list-unstyled mb-0">
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Email</a>
+          <a href="contact.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Email</a>
           </li>
           <li>
           <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Telefoon</a>
@@ -75,7 +75,7 @@
           <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Adres</a>
           </li>
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 4</a>
+          <a href="Login.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Login</a>
           </li>
         </ul>
       </div>

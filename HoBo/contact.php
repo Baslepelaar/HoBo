@@ -38,7 +38,7 @@ require_once 'partial/header.php';
               </div>
             </form>
               <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="">Verzenden</a>
+                <a class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a;" onclick="">Verzenden</a>
               </div>
                 <div class="status"></div>
               </div>
