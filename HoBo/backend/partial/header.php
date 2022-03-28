@@ -16,7 +16,7 @@
       
 
      </p>
-      <a href="partial/logout.php" class="btn-cus">Logout</a>
+      <a href="logout.php" class="btn-cus">Logout</a>
     </header>
     <section class="container">
       <div id="sidebar">
