@@ -11,8 +11,12 @@
 	border-radius: 2vw;
 }
 
+::-webkit-scrollbar-track {
+	background: #1a4236;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-background: #348d72; 
+	background: #348d72; 
 }
 
 html, body{
@@ -64,6 +68,7 @@ footer h5{
 }
 
 main{
+	
 	background-color: #111;
 	display: flex;
 	flex-direction: column;
