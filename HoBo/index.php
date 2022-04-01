@@ -44,7 +44,6 @@ include('backend/alert.php');
     </section>
   </main>
 </body>
-
 <?php
 require_once 'partial/footer.php';
 ?>  
