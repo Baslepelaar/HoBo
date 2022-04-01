@@ -26,7 +26,8 @@ class Login extends Online {
             }
             session_start();
             $_SESSION['loggedin'] = true;
-            $_SESSION['email'] = $user->email;
+            $_SESSION['email'] = $user->Email;
+            $_SESSION['klantnr'] = $user->KlantNr;
             header("Location: index.php?login=success");
         } catch(Exception $e) {
             return $e->getMessage();
