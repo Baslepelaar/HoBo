@@ -69,10 +69,10 @@
           <a href="contact.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Email</a>
           </li>
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Telefoon</a>
+          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Adres</a>
           </li>
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Adres</a>
+          <a href="overons.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Overons</a>
           </li>
           <li>
           <a href="Login.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Login</a>
