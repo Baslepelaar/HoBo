@@ -4,10 +4,12 @@
     session_start();
     require_once 'class/UserRight.php';
     require_once 'class/Admin.php';
+    require_once 'class/Maintenance.php';
 
     $is_online = new Online();
     $userright = new UserRight();
     $admin = new Admin();
+    $maintenance = new Maintenance();
 
     $id = $_SESSION['klantnr'];
 
@@ -90,46 +92,26 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="box-login">
-                    <center><h4><strong>Live Chat</strong></h4></center>
-                    <center><hr style="width: 90%;"></center>
-
-                    <center><h4><a href="https://dashboard.tawk.to" target="_blank" <span class="label label-info">Dashboard</span></a></h4></center>
-                </div>
-
-
-
-                <div class="box-login">
                     <center><h4><strong>Stats</strong></h4></center>
                     <center><hr style="width: 90%;"></center>
 
                     <center><h1><i class="fa fa-user" aria-hidden="true"></i></h1>
                         <h5>Active Users</h5>
-                        <h4><strong><?php echo countUsers(); ?></strong></h4></center>
+                        <h4><strong><?php echo $admin->countUsers(); ?></strong></h4></center>
                     <center><hr style="width: 60%;"></center>
 
                     <center><h1><i class="fa fa-user-times" aria-hidden="true"></i></h1>
                         <h5>Banned Users</h5>
-                        <h4><strong><?php echo countBannedUsers(); ?></strong></h4></center>
+                        <h4><strong><?php echo $admin->countBannedUsers(); ?></strong></h4></center>
                     <center><hr style="width: 60%;"></center>
 
                     <center><h1><i class="fa fa-ticket" aria-hidden="true"></i></h1>
-                        <h5>Active Parks</h5>
-                        <h4><strong><?php echo countActiveParks(); ?></strong></h4></center>
+                        <h5>Series</h5>
+                        <h4><strong><?php echo $admin->countSeries(); ?></strong></h4></center>
                     <center><hr style="width: 60%;"></center>
-
-                    <center><h1><i class="fa fa-plus-circle" aria-hidden="true"></i></h1>
-                        <h5>Park Request</h5>
-                        <h4><strong><?php echo countRequestParks(); ?></strong></h4></center>
-                    <center><hr style="width: 60%;"></center>
-
-                    <center><h1><i class="fa fa-square-o" aria-hidden="true"></i></h1>
-                        <h5>Active Park Posts</h5>
-                        <h4><strong><?php echo countPostParks(); ?></strong></h4></center>
-                    <center><hr style="width: 60%;"></center>
-
-                    <center><h1><i class="fa fa-plus-circle" aria-hidden="true"></i></h1>
-                        <h5>Park Post Resuests</h5>
-                        <h4><strong><?php echo countRequestPostParks(); ?></strong></h4></center>
+                    <center><h1><i class="fa fa-ticket" aria-hidden="true"></i></h1>
+                        <h5>Streams</h5>
+                        <h4><strong><?php echo $admin->countStream(); ?></strong></h4></center>
                     <center><hr style="width: 60%;"></center>
                 </div>
             </div>
@@ -151,7 +133,7 @@
                                 <td>
                                     <p>Maintenance mode is now
                                         <?php
-                                        if(getMaintenance() == '1') {
+                                        if($maintenance->getMaintenance() == '1') {
                                             echo ' <span class="label label-danger">Active</span>';
                                         }
                                         else {
@@ -161,12 +143,12 @@
                                 </td>
                                 <td>
                                     <?php
-                                    if(canManageSettings($_SESSION['id'])) {
-                                        if(getMaintenance() == '1') {
-                                            echo '<a href="core/maintenance-mode.php?data=0"><span class="label label-success">Deactivate</span><a>';
+                                    if($userright->canManageSettings($id)) {
+                                        if($maintenance->getMaintenance() == '1') {
+                                            echo '<a href="maintenance-mode.php?data=0"><span class="label label-success">Deactivate</span><a>';
                                         }
                                         else {
-                                            echo '<a href="core/maintenance-mode.php?data=1"><span class="label label-danger">Activate</span><a>';
+                                            echo '<a href="maintenance-mode.php?data=1"><span class="label label-danger">Activate</span><a>';
                                         }
                                     }
                                     else {
@@ -181,131 +163,7 @@
                     </div>
                 </div>
                 <div class="box-login" >
-                    <h4 style="margin-left: 5%;"><strong>Park Requests</strong></h4>
-                    <center><hr style="width: 90%;"></center>
-                    <div style="margin-left: 5%; margin-right: 5%;">
-                        <?php
-                        if(canManageparkRequests($_SESSION['id'])) {
-                            require_once('core/ini.php');
-
-                            $sql 	= "SELECT * FROM `parks` WHERE `deleted`='0' AND `reviewed`='0' ORDER BY id DESC";
-                            $result = connection()->query($sql);
-                            if($result->num_rows > 0){
-
-                                echo '<table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Park Name</th>
-                                                    <th>Park IP</th>
-                                                    <th>Owner</th>
-                                                    <th>Social Media</th>
-                                                    <th>Date</th>
-                                                    <th>Reaction</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>';
-
-                                while($row = $result->fetch_assoc())
-                                {
-                                    $status = json_decode(file_get_contents('https://api.mcsrvstat.us/1/'.$row['ip'].''));
-                                    $offline = $status->offline;
-                                    if(!$offline){
-                                        $online = $status->players->online;
-                                        $max = $status->players->max;
-                                    }
-                                    echo '<tr>
-                                                <td>'.$row['name'].'</td>
-                                                <td>'.$row['ip'].' ';
-                                    if(!$offline){
-                                        echo '<span class="label label-success">'.$online.' / '.$max.'</span>';
-                                    }
-                                    else {
-                                        echo '<span class="label label-danger">Server Offline</span>';
-                                    }
-                                    echo '	</td>
-                                                <td><a href="users.php?'.$row['owner'].'">'.getFirstname($row['owner']).' '.getFamilyname($row['owner']).'</a></td>
-                                                <td>';
-
-                                    if(!empty($row['twitter'])){
-                                        echo '<a href="'.$row['twitter'].'"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-                                    }
-                                    if(!empty($row['facebook'])){
-                                        echo ' <a href="'.$row['facebook'].'"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
-                                    }
-                                    if(!empty($row['youtube'])){
-                                        echo ' <a href="'.$row['youtube'].'"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>';
-                                    }
-                                    if(!empty($row['website'])){
-                                        echo ' <a href="'.$row['website'].'"><i class="fa fa-globe" aria-hidden="true"></i></a>';
-                                    }
-
-                                    echo '	</td>
-                                                <td>'.$row['datum'].'</td>
-                                                <td><a href="?park_id='.$row['id'].'&accept"><span class="label label-success">Accept</span></a> <a href="?park_id='.$row['id'].'&reject"><span class="label label-danger">Reject</span></a></td>
-                                              </tr>';
-                                }
-                                echo '	</tbody>
-                                          </table>';
-                            }
-                            else{
-                                echo '<h5>There are currently no park requests...</h5>';
-                            }
-                        }
-                        else{
-                            echo '<h5>You are not allowed to manage the park requests. If this is wrong you can contact a site administrator.</h5>';
-                        }
-                        ?>						</div>
-                </div>
-                <div class="box-login" >
-                    <h4 style="margin-left: 5%;"><strong>Post Requests</strong></h4>
-                    <center><hr style="width: 90%;"></center>
-                    <div style="margin-left: 5%; margin-right: 5%;">
-                        <?php
-                        if(canManagePosts($_SESSION['id'])) {
-                            require_once('core/ini.php');
-
-                            $sql 	= "SELECT * FROM `posts` WHERE `deleted`='0' AND `reviewed`='0' ORDER BY id DESC";
-                            $result = connection()->query($sql);
-                            if($result->num_rows > 0){
-
-                                echo '<table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Park</th>
-                                                    <th>Title</th>
-                                                    <th>Date</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>';
-                                while($row = $result->fetch_assoc())
-                                {
-                                    echo '<tr>
-                                                <td><a href="park.php?id='.$row['park_id'].'"><img src="'.getParklogo($row['park_id']).'" height="20px" /> '.getParkname($row['park_id']).'</a>';
-                                    if (isParkDelted($row['park_id'])) {
-                                        echo ' <span class="label label-danger">Park Deleted</span>';
-                                    }
-                                    echo '	</td>
-                                                <td>'.$row['post_title'].'</td>
-                                                <td>'.$row['posted_on'].'</td>
-                                                <td><a href="article.php?id='.$row['id'].'"><span class="label label-info">Read post</span></a></td>
-                                              </tr>';
-                                }
-                                echo '	</tbody>
-                                          </table>';
-                            }
-                            else{
-                                echo '<h5>There are currently no post requests...</h5>';
-                            }
-                        }
-                        else{
-                            echo '<h5>You are not allowed to manage the post requests. If this is wrong you can contact a site administrator.</h5>';
-                        }
-
-                        ?>						</div>
-                </div>
-                <div class="box-login" >
-                    <h4 style="margin-left: 5%;"><strong>MineThemepark Staff</strong>
+                    <h4 style="margin-left: 5%;"><strong>Hobo Staff</strong>
                         <?php
                         if(canManageStaff($_SESSION['id'])) {
                             echo '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#staffModal" style="margin-left: 20px;">Add staff</button>';
