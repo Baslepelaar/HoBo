@@ -17,7 +17,7 @@
     $Register = new Register();
 
     $User = $Register->getUser();
-    var_dump($User);
+//    var_dump($User);
     if(isset($_POST['register'])) {
         $Register->create($_POST);
     }
