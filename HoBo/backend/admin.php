@@ -66,24 +66,24 @@
             </div>
         </div>
 
-        <script>
-            $('#addstaff').on('submit', function(e) {
-                e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    url: "core/mtp_add_staff.php",
-                    data: {email: " "+$('#staff_email').val()},
-                    success: function(data){
-                        if(data === 'mtp_add_staff_success'){
-                            document.location.href = '?success=Staff member added, you can now give him a rank and permissions.';
-                        }
-                        else {
-                            document.location.href = data;
-                        }
-                    }
-                });
-            });
-        </script>
+<!--        <script>-->
+<!--            $('#addstaff').on('submit', function(e) {-->
+<!--                e.preventDefault();-->
+<!--                $.ajax({-->
+<!--                    type: "POST",-->
+<!--                    url: "core/mtp_add_staff.php",-->
+<!--                    data: {email: " "+$('#staff_email').val()},-->
+<!--                    success: function(data){-->
+<!--                        if(data === 'mtp_add_staff_success'){-->
+<!--                            document.location.href = '?success=Staff member added, you can now give him a rank and permissions.';-->
+<!--                        }-->
+<!--                        else {-->
+<!--                            document.location.href = data;-->
+<!--                        }-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+<!--        </script>-->
         <!-- Add Staff Modal End -->
 
 
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <?php include('inc/alert.php'); ?>
+<!--                --><?php //include('inc/alert.php'); ?>
                 <div class="box-login" >
                     <h4 style="margin-left: 5%;"><strong>Settings</strong></h4>
                     <center><hr style="width: 90%;"></center>
@@ -165,14 +165,14 @@
                 <div class="box-login" >
                     <h4 style="margin-left: 5%;"><strong>Hobo Staff</strong>
                         <?php
-                        if(canManageStaff($_SESSION['id'])) {
+                        if($userright->canManageStaff($id)) {
                             echo '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#staffModal" style="margin-left: 20px;">Add staff</button>';
                         }
                         ?>						</h4>
                     <center><hr style="width: 90%;"></center>
                     <div style="margin-left: 5%; margin-right: 5%;">
                         <?php
-                        if(canManageStaff($_SESSION['id'])) {
+                        if($userright->canManageStaff($id)) {
                             require_once('core/ini.php');
 
                             $sql 	= "SELECT * FROM `mtp_staff` ORDER BY id";

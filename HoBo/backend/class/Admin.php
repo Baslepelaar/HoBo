@@ -75,5 +75,9 @@ class Admin extends DBConfig
 
         return $count;
     }
+
+    function AddAdmin() {
+
+    }
 }
 ?>

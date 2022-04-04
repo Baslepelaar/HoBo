@@ -27,5 +27,17 @@ class UserRight extends Online {
         }
     }
 
+    function canManageStaff($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_staff = '1'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 ?>
