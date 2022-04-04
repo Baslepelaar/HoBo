@@ -33,29 +33,29 @@
 
     <?php include('backend/alert.php'); ?>
     <main>
-		<section class="row w-100 h-100">
-        <article class="col-md-5 forum mt-5 p-4" style="background-color: green; border-radius: 1vw;">
+		<section class="row w-100 h-100 justify-content-center">
+        <article class="col-md-5 forum mt-5 p-4">
           <h2 class="h1-responsive font-weight-bold text-center my-4" style="color: white;">Inloggen</h2>
               <div class="row">
-                <div class="col-md-9 mb-md-0 w-responsive mx-auto mb-5" style="margin-left: 5vw;">
+                <div class="col-md-9 mb-md-0 w-responsive mx-auto" style="margin-left: 5vw;">
                   <form id="contact-form" name="contact-form" method="POST">
                  <div class="row">
               <div class="col-md-12">
                 <div class="md-form mt-3">
-                  <input type="email" id="name" name="email" class="form-control mb-3" placeholder="Email" required>
-                  <input type="password" id="email" name="password" class="form-control mb-3" placeholder="Password" required>
+                  <input class="text-center mb-1" type="email" id="name" name="email" style="height: 5vh;" placeholder="Email" required>
+                  <input class="text-center mb-1" type="password" id="email" name="password" style="height: 5vh;" placeholder="Wachtwoord" required>
                 </div>
               </div>
             </form>
-              <div class="text-center text-md-left col-md-12">
-			  <input class="btn btn-primary"type="submit"  name="login" value="Login" style="background-color: #02ee5a; border-color: #02ee5a;">
-			  <a href="registratie.php" class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a;" onclick="">Registreren</a>
-			</div>
-			<div class="status"></div>
+              <div class="text-center text-md-left col-md-12 mt-3">
+			          <input class="btn btn-primary"type="submit" name="login" value="Login" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">
+			          <a href="registratie.php" class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" onclick="">Registreren</a>
+			        </div>
+			          <div class="status"></div>
               </div>
             </div>
-          </section>
-      </article>
+        </article>
+      </section>
     </main>
 
 <?php

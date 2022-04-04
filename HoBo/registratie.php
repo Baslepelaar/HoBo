@@ -34,24 +34,32 @@
 ?>
 
     <?php include('backend/alert.php'); ?>
+
     <main>
-    	<section class="form">
-	    	<form method="post">
-                <label for="voornaam" id="voornaam">Voornaam: </label>
-                <input type="text" name="voornaam" required>
-                <label for="tussenvoegsel" id="tussenvoegsel">Tussenvoegsel: </label>
-                <input type="text" name="tussenvoegsel">
-                <label for="achternaam" id="achternaam">Achternaam: </label>
-                <input type="text" name="achternaam" required>
-                <label for="email" id="email">Email: </label>
-                <input type="email" name="email" required>
-                <label for="password">Wachtwoord: </label>
-                <input type="password" name="password" required>
-                <label for="conf-password">Wachtwoord bevestigen: </label>
-                <input type="password" name="conf-password" required>
-                <input type="submit" name="register" value="Register">
-	    	</form>
-    	</section>
+		<section class="row w-100 h-100 justify-content-center">
+        <article class="col-md-5 forum mt-5 p-4">
+          <h2 class="h1-responsive font-weight-bold text-center my-4" style="color: white;">Registreren</h2>
+              <div class="row">
+                <div class="col-md-9 mb-md-0 w-responsive mx-auto" style="margin-left: 5vw;">
+                  <form id="contact-form" name="contact-form" method="POST">
+                 <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mt-3">
+                 <input class="text-center mb-1" type="text" name="voornaam" style="height: 5vh;" placeholder="Voornaam" required>
+                 <input class="text-center mb-1" type="text" name="tussenvoegsel" class="text-center" style="height: 5vh;" placeholder="Tussenvoegsel">
+                 <input class="text-center mb-1" type="text" name="achternaam" class="text-center" style="height: 5vh;" placeholder="Achternaam" required>
+                 <input class="text-center mb-1" type="email" name="email" class="text-center"style="height: 5vh;"  placeholder="Email" required>
+                 <input class="text-center mb-1" type="password" name="password" class="text-center" style="height: 5vh;" placeholder="Wachtwoord" required>
+                 <input class="text-center mb-1" type="password" name="conf-password" class="text-center" style="height: 5vh;" placeholder="Wachtwoord bevestigen" required>
+                 <div class="text-center mt-3">
+                    <input type="submit" class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="register" value="Register">
+                </div>
+                </div>
+              </div>
+            </form>
+            </div>
+        </article>
+      </section>
     </main>
 
 
