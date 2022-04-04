@@ -1,6 +1,9 @@
 <?php
 	session_start();
-	include('functions.php');
+
+    require_once 'class/Maintenance.php';
+
+    $maintenance = new Maintenance();
 	
 	if(!is_online())
 	{
@@ -9,9 +12,7 @@
 	
 	$data = $_GET['data'];
  
-	if(canManageSettings($_SESSION['id'])) {
-		
-		require_once('ini.php');
+	if($maintenance->canManageSettings($_SESSION['id'])) {
 		
 		$sql = "SELECT * FROM `settings` WHERE `variable`='maintenance'";
         $result = connection()->query($sql);
@@ -20,13 +21,13 @@
 			$sql = "UPDATE `settings` SET `data`='".$data."' WHERE `variable`='maintenance';";
              connection()->query($sql);
 			
-			header('Location: ../staff-panel.php?success=The maintenance mode is switched.');
+			header('Location: admin.php?success=The maintenance mode is switched.');
 		}
 		else {
-			header('Location: ../staff-panel.php?danger=Something went wrong.');
+			header('Location: admin.php?danger=Something went wrong.');
 		}
 	}
 	else {
-		header('Location: ../staff-panel.php');
+		header('Location: admin.php');
 	}
 ?>
