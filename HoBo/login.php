@@ -48,8 +48,8 @@
               </div>
             </form>
               <div class="text-center text-md-left col-md-12 mt-3">
-			          <input class="btn btn-primary"type="submit" name="login" value="Login" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">
-			          <a href="registratie.php" class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" onclick="">Registreren</a>
+			          <input class="btn btn-primary btn-lg"type="submit" name="login" value="Login" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">
+			          <a href="registratie.php" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a;">Registreren</a>
 			        </div>
 			          <div class="status"></div>
               </div>

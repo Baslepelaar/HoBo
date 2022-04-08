@@ -30,15 +30,15 @@ require_once 'partial/header.php';
                   </div>
               </div>
                 <div class="row">
-                  <div class="col-md-12 mb-3">
+                  <div class="col-md-12 mb-3 mt-4">
                     <div class="md-form">
-                      <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Je vraag aan ons"></textarea>
+                      <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea" placeholder="Je vraag aan ons"></textarea>
                     </div>
                 </div>
               </div>
             </form>
               <div class="text-center text-md-left">
-                <a class="btn btn-primary" style="background-color: #02ee5a; border-color: #02ee5a;" onclick="">Verzenden</a>
+                <a class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a;" onclick="">Verzenden</a>
               </div>
                 <div class="status"></div>
               </div>
