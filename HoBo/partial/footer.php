@@ -32,7 +32,7 @@
         <h5 class="text-uppercase" style="font-size: 1.5rem; color: grey;">Pagina's</h5>
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 1</a>
+            <a href="index.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Home</a>
           </li>
           <li>
             <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 2</a>
@@ -49,10 +49,10 @@
         <h5 class="text-uppercase" style="font-size: 1.5rem; color: grey;">Over ons</h5>
         <ul class="list-unstyled mb-0">
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 1</a>
+          <a href="overons.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Over ons</a>
           </li>
           <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 2</a>
+          <a href="abonnementen.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Abonnementen</a>
           </li>
           <li>
           <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 3</a>
@@ -72,10 +72,10 @@
           <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Adres</a>
           </li>
           <li>
-          <a href="overons.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Overons</a>
+          <a href="login.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Login</a>
           </li>
           <li>
-          <a href="Login.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Login</a>
+          <a href="registratie.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Registreren</a>
           </li>
         </ul>
       </div>
