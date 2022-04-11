@@ -1,34 +1,13 @@
 <?php
     require_once 'partial/header.php';
-    require_once 'backend/class/Register.php';
+    require_once 'backend/class/User.php';
 
-    session_start();
-    $is_online = new Online();
+    $user = new User();
 
-    $online = $is_online->getIs_online();
-    $banned = false;
-    if($online) {
-        $banned = true;
-    }
-    if($banned) {
-        header('Location: index.php');
-    }
-
-    $Register = new Register();
-
-    $User = $Register->getUser();
-//    var_dump($User);
+    $users = $user->getUsers();
+    var_dump($users);
     if(isset($_POST['register'])) {
-        $Register->create($_POST);
-    }
-
-    $ip = new IP();
-
-    $getip = $ip->get_client_ip();
-
-    $ip->addIPtoList($getip);
-    if($ip->isIPBanned($getip)) {
-        header('Location: https://google.com');
+        $user->create($_POST);
     }
 
 ?>

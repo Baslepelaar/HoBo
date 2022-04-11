@@ -1,10 +1,6 @@
-<?php
-    require_once 'partial/header.php';
+<?php require_once 'partial/header.php'; ?>
 
-    session_start();
-    require_once 'class/UserRight.php';
-    require_once 'class/Admin.php';
-    require_once 'class/Maintenance.php';
+	<main>
 
     $is_online = new Online();
     $userright = new UserRight();
