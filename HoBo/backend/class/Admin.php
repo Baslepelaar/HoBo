@@ -5,40 +5,6 @@ require_once 'DBConfig.php';
 class Admin extends DBConfig
 {
 
-    public function addMTPstaff($email)
-    {
-
-        if ($email != '') {
-
-            $sql = "SELECT * FROM `users` WHERE `email`='" . $email . "'";
-            $result = connection()->query($sql);
-            $count = mysqli_num_rows($result);
-            if ($count > 0) {
-
-                $user_id = getIDfromMail($email);
-
-                $sql = "SELECT * FROM `mtp_staff` WHERE `user_id`='" . $user_id . "'";
-                $result = connection()->query($sql);
-                $count = mysqli_num_rows($result);
-                if (!$count > 0) {
-
-                    $sql = "INSERT INTO `mtp_staff` (`user_id`) VALUES ('" . save_mysql($user_id) . "');";
-                    $conn = connection();
-                    $id = $conn->query($sql);
-
-
-                    return 'mtp_add_staff_success';
-                } else {
-                    return '?warning=That user is already a staff member.';
-                }
-            } else {
-                return '?warning=That email adress is unknown.';
-            }
-        } else {
-            return '?warning=Not all fields are filed in.';
-        }
-    }
-
     function countUsers()
     {
 
@@ -74,6 +40,60 @@ class Admin extends DBConfig
         $count = mysqli_num_rows($result);
 
         return $count;
+    }
+
+    public function addAdmin($data) {
+        try {
+            if($data['Email'] != '') {
+                    $sql 	= "SELECT KlantNr FROM users WHERE Email=:email ";
+                    $stmt = $this->connect()->prepare($sql);
+                    $stmt->bindParam(':email', $data['Email']);
+                    $stmt->execute();
+                    $user = $stmt->fetch(PDO::FETCH_OBJ);
+                    if($user != false) {
+                        $user_id = $stmt->fetch(PDO::FETCH_OBJ);
+
+                        $sql = "SELECT * FROM userrights WHERE User_ID =:userid ";
+                        $stmt = $this->connect()->prepare($sql);
+                        $stmt->bindParam(':userid', $user_id);
+                        $stmt->execute();
+                        $result = $stmt->fetch(PDO::FETCH_OBJ);
+                        if(!$result) {
+                            $sql = "INSERT INTO userrights (User_ID) VALUES (:user_id)";
+                            $stmt = $this->connect()->prepare($sql);
+                            $stmt->bindParam(':user_id', $user->KlantNr);
+                            if($stmt->execute()) {
+                                header("Location: admin.php?succes");
+                            }
+                        } else {
+                            header("Location: admin.php?already");
+                        }
+                    } else {
+                        header("Location: admin.php?unkown");
+                    }
+                } else {
+                header("Location: admin.php?veld leeg");
+            }
+        } catch(Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function getAdmin() {
+        $sql = "SELECT * FROM userrights
+                JOIN users ON 
+                    users.KlantNr = userrights.User_ID
+                ORDER BY ID ";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function getUserData($id) {
+        $sql 	= "SELECT * FROM users WHERE KlantNr =''".$id."''";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchALL(PDO::FETCH_OBJ);
     }
 }
 ?>
