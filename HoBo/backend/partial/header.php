@@ -4,27 +4,29 @@
       <meta charset= "utf-8">
       <meta http-equiv="language" content="NL">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="author" content="Maikel Braas">
+      <meta name="author" content="Bas, William, Mathieu">
       <meta name="keywords" content="html,css-- mijn eigen website">
       <title>Ra site</title>
-      <link rel="stylesheet" href="../css/back.css">
+      <link rel="stylesheet" href="../../css/global.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   </head>
   <body>
-    <header>
-      <a href="../index.php"><img src="../image/logo.jpg"></a>
-      <p>
-      
-
-     </p>
-      <a href="partial/logout.php" class="btn-cus">Logout</a>
-    </header>
-    <section class="container">
-      <div id="sidebar">
-        <span>
-            <a href="index.php"><img src="img/home.png"></a>
-            <a href="blog.php?page=1"><img src="img/pop512.png"></a>
-            <a href="producten.php?page=1"><img src="img/vergroot512.png"></a>
-            <a href="overons.php"><img src="img/tijd512.png"></a>
-            <a href="contact.php"></a>
-          </span>
-      </div>
+<!--    <header>-->
+<!--      <a href="../index.php"><img src="../image/logo.jpg"></a>-->
+<!--      <p>-->
+<!--      -->
+<!---->
+<!--     </p>-->
+<!--      <a href="logout.php" class="btn-cus">Logout</a>-->
+<!--    </header>-->
+<!--    <section class="container">-->
+<!--      <div id="sidebar">-->
+<!--        <span>-->
+<!--          <h2>Gebruikers</h2>-->
+<!--            <a href="">Gebruikers</a>-->
+<!--            <h2>Post</h2>-->
+<!--            <a href="">Add Post</a>-->
+<!--            <a href="p">Posts</a>-->
+<!--          </span>-->
+<!--      </div>-->

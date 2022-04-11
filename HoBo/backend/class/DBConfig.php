@@ -10,3 +10,12 @@
             }
         }
     }
+function connection()
+{
+    $host = "localhost";
+    $user = 'root';
+    $pass = '';
+    $db = 'hobo2022';
+
+    return $link = mysqli_connect($host, $user, $pass, $db);
+}
