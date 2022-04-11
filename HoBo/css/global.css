@@ -1,5 +1,8 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
 *{
-	font-family: 'Kumbh Sans', sans-serif;
+	font-family: "Kumbh Sans", Geneva, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -26,17 +29,22 @@ html, body{
 
 header{
 	position: absolute;
-	justify-content: top;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background-color: #0c0c0c;
-	width: 3rem;
+	width: 4.2rem;
 	height: 100vh;
 	overflow:hidden;
-	z-index: 0;
+	z-index: 1;
 }
 
+header div{
+	margin-left:-0.3rem;
+}
 header img{
-	max-height: 3rem;
-	max-width: 3rem;
+	max-height: 2rem;
+	max-width: 2rem;
 }
 
 nav a{
@@ -47,7 +55,12 @@ nav a{
 }
 
 .logoHeader{
-	margin-left: 0.05rem;
+	position: absolute;
+	margin-left: 0.5rem;
+	max-height: 3rem;
+	max-width: 3rem;
+	z-index:10000;
+
 }
 
  #corners {
@@ -70,7 +83,7 @@ main{
 	background-color: #111;
 	display: flex;
 	flex-direction: column;
-	margin-left: 3rem;
+	margin-left: 4.2rem;
 	min-height: 100vh;
 }
 
@@ -115,6 +128,38 @@ main{
 	align-self: flex-end;
 	margin-top: auto;
 }
+
+/* summary pagina opmaak */
+.summaryText{
+	color: white;
+	text-shadow: 5px 5px 20px #0c0c0c;
+	font-size: 21px;
+	max-width: 65%;
+}
+
+.summaryVideo{
+	align-items:center;
+}
+
+.summaryMain{
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,100,0,1) 65%);
+	width: 100%;
+	height: 100vh;
+}
+
+.videostreamSum{
+	box-shadow: -35px 5px 150px #0c0c0c;
+}
+/* einde summary pagina opmaak */
+
+/* streaming pagina opmaak */
+.videostream{
+	height: 80%;
+}
+/* einde streaming pagina opmaak */
+
+
+
 
 
 .post{
@@ -565,4 +610,3 @@ a.footer-link:hover {
 /* Park */
 
 /* Park End */
-
