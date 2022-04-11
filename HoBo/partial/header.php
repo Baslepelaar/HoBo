@@ -19,12 +19,12 @@
       <div class="d-flex flex-column flex-shrink-0 align-items-center" >
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
           <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+            <a href="index.php" class="nav-link active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
             <div class="align-items-center"><img src="img/home.png" style="height: 2rem;"></div>
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+            <a href="login.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
             <div><img src="img/pop512.png" style="height: 2rem;"></div>
             </a>
           </li>

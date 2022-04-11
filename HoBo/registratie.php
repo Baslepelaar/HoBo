@@ -36,32 +36,84 @@
     <?php include('backend/alert.php'); ?>
 
     <main>
-		<section class="row w-100 h-100 justify-content-center">
-        <article class="col-md-5 forum mt-5 p-4">
-          <h2 class="h1-responsive font-weight-bold text-center my-4" style="color: white;">Registreren</h2>
-              <div class="row">
-                <div class="col-md-9 mb-md-0 w-responsive mx-auto" style="margin-left: 5vw;">
-                  <form id="contact-form" name="contact-form" method="POST">
-                 <div class="row">
-              <div class="col-md-12">
-                <div class="md-form mt-3">
-                 <input class="text-center mb-1" type="text" name="voornaam" style="height: 5vh;" placeholder="Voornaam" required>
-                 <input class="text-center mb-1" type="text" name="tussenvoegsel" class="text-center" style="height: 5vh;" placeholder="Tussenvoegsel">
-                 <input class="text-center mb-1" type="text" name="achternaam" class="text-center" style="height: 5vh;" placeholder="Achternaam" required>
-                 <input class="text-center mb-1" type="email" name="email" class="text-center"style="height: 5vh;"  placeholder="Email" required>
-                 <input class="text-center mb-1" type="password" name="password" class="text-center" style="height: 5vh;" placeholder="Wachtwoord" required>
-                 <input class="text-center mb-1" type="password" name="conf-password" class="text-center" style="height: 5vh;" placeholder="Wachtwoord bevestigen" required>
-                 <div class="text-center mt-3">
+  <div class="row w-100 h-100 justify-content-center mt-5">
+  <form id="contact-form" name="contact-form" method="POST">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4" style="border-radius: 2vh; border: white solid 0px">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img
+                src="img/image 1.jpg"
+                alt="star wars achtergrond"
+                class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 80vh; border-top-left-radius: 2vh; border-bottom-left-radius: 2vh;"/>
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-center">Registreren</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <input class="text-center mb-1" type="text" name="voornaam" style="height: 5vh; border-radius: 1vh;" placeholder="Voornaam" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <input class="text-center mb-1" type="text" name="tussenvoegsel" class="text-center" style="height: 5vh; border-radius: 1vh;" placeholder="Tussenvoegsel">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <input class="text-center mb-1" type="text" name="achternaam" class="text-center" style="height: 5vh; border-radius: 1vh;" placeholder="Achternaam" required>
+                    </div>
+                  </div>
+
+                <div class="form-outline mb-4">
+                <input class="text-center mb-1" type="email" name="email" class="text-center"style="height: 5vh; border-radius: 1vh;"  placeholder="Email" required>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <input class="text-center mb-1" type="password" name="password" class="text-center" style="height: 5vh; border-radius: 1vh;" placeholder="Wachtwoord" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                    <input class="text-center mb-1" type="password" name="conf-password" class="text-center" style="height: 5vh; border-radius: 1vh;" placeholder="Wachtwoord bevestigen" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 mb-4">
+                    <input type="checkbox" id="voorwaarden" name="voorwaarden" value="ja" required> Ik ga akkoord met de privacy voorwaarden</input>
+                  </div>
+
+                <div class="row">
+                  <div class="col-md-12 mb-4">
+                    <p>Heb je al een account? Klik dan <a class="text-decoration-none" href="login.php" style="color: black;"><b>Hier</a></p>
+                  </div>
+
+                  <div class="submit">
                     <input type="submit" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="register" value="Register">
                 </div>
-                </div>
-              </div>
-            </form>
-            </div>
-        </article>
-      </section>
-    </main>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    </form> 
+  </div>
+</section>
+    </main>
 
 <?php
     require_once 'partial/footer.php';

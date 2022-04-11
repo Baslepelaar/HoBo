@@ -11,37 +11,27 @@ include('backend/alert.php');
       mask-image: linear-gradient(to bottom, rgba), rgba(0,0,0,0));"></article>
     <section class="row w-100 h-100 card-img-overlay">
         <article class="container mt-5">
-            <article class="col-md-4 logo"><img src="img/SW-logo.png" alt="Star Wars logo" style="height: 10vw; justify-content-end; margin-left: 5vw; margin-top: 5vh;"></article>
+            <article class="col-md-4 logo" style="margin-left: 5vw; margin-top: 5vh; color: white;"><h1>Star Wars: The Rise of Skywalker</h1></article>
             <article class="col-md-5 col-sm-2 filmtekst" style="margin-left: 5vw; margin-top: 5vh;">
                 <p class="filmtext" style="font-size: 1.5rem; color: white;">Star Wars is een Amerikaanse epische space-opera-filmserie bedacht door George Lucas
                 en ontwikkeld door zijn bedrijf Lucasfilm. Het epos bestaat uit drie afgeronde trilogieën,
                 twee losstaande films, twee live-actionseries, meerdere animatieseries en meerdere stripreeksen.
                 </p>
             </article>
-        <article class="carousel" style="margin-left: 5vw; margin-top: 5vh;">
-            <div id="carouselExampleControls" class="carousel slide col-md-3" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/infinity-war-bg.jpg" alt="First slide" style="border-radius: 1vw;">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/SW-logo.png" alt="First slide" style="border-radius: 1vw;">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/infinity-war-bg.jpg" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only"></span>
-                </a>
-              </div>
-        </article>
-    </section>
+            <article class="col-md-5 col-sm-2 descriptie" style="margin-left: 5vw; margin-top: 5vh;">
+                <p class="filmtext" style="font-size: 1.5rem; color: white;"><i class="bi bi-star-fill" style="color: green;"></i><i class="bi bi-star-fill" style="color: green;"></i><i class="bi bi-star-fill" style="color: green;"></i><i class="bi bi-star-fill" style="color: green;"></i><i class="bi bi-star-half" style="color: green;"></i></i> 97 recenties
+              | 2019 | Sci-fi/Actie | 2 u 22 m</p>
+            </article>
+            <article class="col-md-5 col-sm-2 filmtekst" style="margin-left: 5vw; margin-top: 5vh;">
+            <input type="submit" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="abonnement" value="Begin met kijken">
+    </article>
+    <article class="col-md-10 col-sm-2 row" style="margin-left: 5vw; margin-top: 5vh; color: white;"><h2>Gallery</h2>
+      <article class="col-md-3 col-sm-2 img1"><img src="img/image 1.jpg" style="height: 30vh; border-radius: 1vw;"></article>
+      <article class="col-md-3 col-sm-2 img2"><img src="img/image 2.jpg" style="height: 30vh; border-radius: 1vw;"></article>
+      <article class="col-md-3 col-sm-2 img3"><img src="img/image 3.jpg" style="height: 30vh; border-radius: 1vw;"></article>
+      <article class="col-md-3 col-sm-2 img5"><img src="img/image 5.jpg" style="height: 30vh; border-radius: 1vw;"></article>
+    </article>
+  </section>
   </main>
 </body>
 <?php
