@@ -22,7 +22,7 @@
         header('Location: ../index.php');
     } else {
         if (!$userright->canUseStaffPanel($id)) {
-            header('Location: ../index.php');
+            header('Location: ../index.php'); 
         }
     }
 
