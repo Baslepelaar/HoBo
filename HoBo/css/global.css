@@ -283,7 +283,7 @@ input[type=text], input[type=password], input[type=email]{
 }
 
 /*!
- * Copyright (c) 2017 Netixy Development
+ * admin
  */
 
 /* HTML, Body */
@@ -385,80 +385,11 @@ a.article-link:active {
 	color: #595959;
 	text-decoration: none;
 }
-
-/* Social Media */
-.twitter {
-	color: #6d6d6d;
-}
-.twitter:hover {
-	color: #016eb2;
-	text-decoration: none;
-}
-.twitter:active {
-	color: #016eb2;
-	text-decoration: none;
-}
-
-.facebook {
-	color: #6d6d6d;
-	margin-left: 10px;
-}
-.facebook:hover {
-	color: #016eb2;
-	text-decoration: none;
-}
-.facebook:active {
-	color: #016eb2;
-	text-decoration: none;
-}
-
-.instagram {
-	color: #6d6d6d;
-	margin-left: 10px;
-}
-.instagram:hover {
-	color: #ceb300;
-	text-decoration: none;
-}
-.instagram:active {
-	color: #ceb300;
-	text-decoration: none;
-}
-
-.youtube {
-	color: #6d6d6d;
-	margin-left: 10px;
-}
-.youtube:hover {
-	color: #b20101;
-	text-decoration: none;
-}
-.youtube:active {
-	color: #b20101;
-	text-decoration: none;
-}
-/* Social Media End */
 /* Main End */
-
-/* Footer */
-a.footer-link {
-	color: #595959;
-}
-a.footer-link:hover {
-	color: #b90303;
-	text-decoration: none;
-}
 
 .nav-font {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
-}
-
-/* Park List */
-
-.park-list-banner {
-	height: 75px;
-	width: 100%;
 }
 
 /* Login */

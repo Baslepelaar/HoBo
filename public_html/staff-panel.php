@@ -12,20 +12,20 @@
 		
 		session_start();
 		include('core/functions.php');
-		$online = false;
-			if(is_online())
-		{
-			$online = true;
-		}
-		
-		if(!$online) {
-				header('Location: index.php');
-		}
-		else {
-			if(!canUseStaffPanel($_SESSION['id'])) {
-				header('Location: index.php');
-			}
-		}
+//		$online = false;
+//			if(is_online())
+//		{
+//			$online = true;
+//		}
+//
+//		if(!$online) {
+//				header('Location: index.php');
+//		}
+//		else {
+//			if(!canUseStaffPanel($_SESSION['id'])) {
+//				header('Location: index.php');
+//			}
+//		}
 		
 		$user_ip = get_client_ip();
 		addIPtoList($user_ip);

@@ -82,5 +82,19 @@
                 return false;
             }
         }
+
+        function getIpFromUser($uid) {
+
+            $sql 	= "SELECT ip FROM users WHERE KlantNr=".$uid."";
+            $result = connection()->query($sql);
+            if($result->num_rows > 0)
+            {
+                return $result->fetch_assoc()['ip'];
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 ?>
