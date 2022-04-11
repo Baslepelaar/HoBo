@@ -1,20 +1,6 @@
 *{
 	font-family: 'Kumbh Sans', sans-serif;
 }
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
-@media all and (max-width:900.9px){
-
-	header{
-		display:flex;
-		justify-content: center;
-		flex-direction: row;
-		background-color: #0c0c0c;
-		height: 10vh;
-		align-items: center;
-		overflow:hidden;
-		z-index: 1;
-	}
 
 ::-webkit-scrollbar {
 	width: 1vw;
@@ -45,7 +31,7 @@ header{
 	width: 3rem;
 	height: 100vh;
 	overflow:hidden;
-	z-index: 1;
+	z-index: 0;
 }
 
 header img{
@@ -123,15 +109,6 @@ main{
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-.summaryText{
-	color: white;
-	text-shadow: 5px 5px 20px #0c0c0c;
-	font-size: 21px;
-	max-width: 65%;
-}
-
-.summaryVideo{
-	align-items:center;
 }
 
 .content:nth-child(2){
@@ -146,19 +123,6 @@ main{
 	border-bottom: 1px solid black;
 	width: 70%;
 	margin: 10px 0;
-.videostreamSum{
-	box-shadow: -35px 5px 150px #0c0c0c;
-}
-
-.summaryMain{
-	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,100,0,1) 65%);
-	width: 100%;
-	height: 100vh;
-}
-
-
-*{
-	font-family: "Kumbh Sans", Geneva, sans-serif;
 }
 
 .post a{
