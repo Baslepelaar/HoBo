@@ -28,7 +28,7 @@ class UserRight extends Online {
     }
 
     function canManageStaff($id) {
-        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_staff = '1'";
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_admins = '1'";
         $stmt = $this->connect()->prepare($sql);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
