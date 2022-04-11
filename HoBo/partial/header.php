@@ -17,7 +17,7 @@
   <body>
   <img src="img/logo.png" class="logoHeader">
     <header>
-      <div class=" d-flex flex-shrink-0 align-items-center" >
+      <div class="d-flex flex-shrink-0 align-items-center" >
         <ul class="nav nav-pills mb-auto text-center">
           <li class="nav-item btn-sm">
             <a href="#" class="nav-link active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
