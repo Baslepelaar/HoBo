@@ -8,7 +8,7 @@ class Admin extends DBConfig
     function countUsers()
     {
 
-        $sql = "SELECT * FROM `users` WHERE `active`='1' AND `banned`='0'";
+        $sql = "SELECT KlantNr FROM `users` WHERE `active`='1' AND `banned`='0'";
         $result = connection()->query($sql);
         $count = mysqli_num_rows($result);
 
