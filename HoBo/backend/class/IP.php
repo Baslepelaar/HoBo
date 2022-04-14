@@ -31,9 +31,14 @@
 
             return $this->ipaddress;
         }
-        public function addIPtoList() {
+        public function addIPtoList($ipaddress, $id) {
 
-            if($this->ipaddress == ''){
+            $sql = "SELECT KlantNr FROM ip";
+            $iddb = $this->connect()->prepare($sql);
+            $iddb->execute();
+//            die(var_dump($iddb));
+
+            if($ipaddress == '') {
 
                 echo 'het werkt niet';
 
@@ -45,11 +50,23 @@
                 //     $conn = connection();
                 //     $id = $conn->query($sql);
                 // }
+            } else if($id == "SELECT KlantNr FROM ip") {
+                try {
+                    $sql = "UPDATE ip SET Ip = :Ip WHERE KlantNr == :KlantNr";
+                    $stmt = $this->connect()->prepare($sql);
+                    $stmt->bindParam(":KlantNr", $id);
+                    $stmt->bindParam(":Ip", $ipaddress);
+                    $stmt->execute();
+                } catch(Exception $e) {
+                    echo $e->getMessage();
+                }
             } else {
                 try {
-                    $sql = "INSERT INTO ip (Ip) VALUES (:Ip)";
+                    $sql = "INSERT INTO ip (KlantNr, Ip) VALUES (:KlantNr, :Ip) Limit = 1";
                     $stmt = $this->connect()->prepare($sql);
-                    $stmt->bindParam(":Ip", $this->ipaddress);
+                    $stmt->bindParam(":KlantNr", $id);
+                    $stmt->bindParam(":Ip", $ipaddress);
+                    $stmt->execute();
 
                 } catch(Exception $e) {
                     echo $e->getMessage();

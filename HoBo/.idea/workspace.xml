@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5a0979c-fb84-4fcf-840f-93cbaf1cbe65" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HoBo/backend/class/IP.php" beforeDir="false" afterPath="$PROJECT_DIR$/HoBo/backend/class/IP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HoBo/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/HoBo/index.php" afterDir="false" />
+    <list default="true" id="f92bfef8-d908-4c5c-bebe-ca91352f4dfa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/class/IP.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/IP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +18,13 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="27k39bLg48aGz3Ng6tSltG79ywD" />
+  <component name="ProjectId" id="27dquJ6isWSJxRVj8kEZEfgrTka" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/HoBo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -42,13 +43,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5a0979c-fb84-4fcf-840f-93cbaf1cbe65" name="Changes" comment="" />
-      <created>1649850106128</created>
+      <changelist id="f92bfef8-d908-4c5c-bebe-ca91352f4dfa" name="Changes" comment="" />
+      <created>1649660532460</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1649850106128</updated>
-      <workItem from="1649850108080" duration="4807000" />
-      <workItem from="1649932379797" duration="64000" />
+      <updated>1649660532460</updated>
+      <workItem from="1649660533631" duration="8763000" />
+      <workItem from="1649844305923" duration="15000" />
+      <workItem from="1649932447364" duration="12000" />
     </task>
     <servers />
   </component>
