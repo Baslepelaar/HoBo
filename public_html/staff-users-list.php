@@ -12,26 +12,26 @@
 		
 		session_start();
 		include('core/functions.php');
-		$online = false;
-			if(is_online())
-		{
-			$online = true;
-		}
-		
-		if(!$online) {
-				header('Location: index.php');
-		}
-		else {
-			if(!canManageUsers($_SESSION['id'])) {
-					header('Location: staff-panel.php?success=You are not allowed to manage users. If this is wrong you can contact a site administrator.');
-			}
-		}
-		
-		$user_ip = get_client_ip();
-		addIPtoList($user_ip);
-		if(isIPBanned($user_ip)){
-			header('Location: https://google.com');
-		}
+//		$online = false;
+//			if(is_online())
+//		{
+//			$online = true;
+//		}
+//
+//		if(!$online) {
+//				header('Location: index.php');
+//		}
+//		else {
+//			if(!canManageUsers($_SESSION['id'])) {
+//					header('Location: staff-panel.php?success=You are not allowed to manage users. If this is wrong you can contact a site administrator.');
+//			}
+//		}
+//
+//		$user_ip = get_client_ip();
+//		addIPtoList($user_ip);
+//		if(isIPBanned($user_ip)){
+//			header('Location: https://google.com');
+//		}
 		
 		
 ?>
@@ -103,7 +103,7 @@
 						<center><hr style="width: 90%;"></center>
 						<div style="margin-left: 5%; margin-right: 5%;">
 <?php
-						if(canManageUsers($_SESSION['id'])) {
+//						if(canManageUsers($_SESSION['id'])) {
 							
 							require_once('core/ini.php');
 							
@@ -158,10 +158,10 @@
 							else{
 								echo '<h5>There is nog staff to manage...</h5>';
 							}
-						}
-						else{
-							echo '<h5>You are not allowed to manage MineThemepark staff. If this is wrong you can contact a site administrator.</h5>';
-						}
+//						}
+//						else{
+//							echo '<h5>You are not allowed to manage MineThemepark staff. If this is wrong you can contact a site administrator.</h5>';
+//						}
 ?>	
 						</div>
 					</div>

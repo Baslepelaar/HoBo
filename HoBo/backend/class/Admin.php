@@ -8,7 +8,7 @@ class Admin extends DBConfig
     function countUsers()
     {
 
-        $sql = "SELECT * FROM `users` WHERE `active`='1' AND `banned`='0'";
+        $sql = "SELECT KlantNr FROM `users` WHERE `active`='1' AND `banned`='0'";
         $result = connection()->query($sql);
         $count = mysqli_num_rows($result);
 
@@ -89,11 +89,11 @@ class Admin extends DBConfig
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    function getUserData($id) {
-        $sql 	= "SELECT * FROM users WHERE KlantNr =''".$id."''";
+    function getUserData() {
+        $sql = "SELECT * FROM users ORDER BY KlantNr ";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchALL(PDO::FETCH_OBJ);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 }
 ?>
