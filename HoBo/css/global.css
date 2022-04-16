@@ -158,8 +158,26 @@ main{
 }
 /* einde streaming pagina opmaak */
 
+/* intro pagina opmaak */
 
+.introMain{
+	color:white;
+	line-height: 1vh;
+	min-height:95vh;
+	text-shadow: 1px 1px 10px #0c0c0c;
+	background: linear-gradient(0deg, rgba(2,238,90,1), rgba(0,0,0,0) 95%);
 
+}
+
+.IntroBoxBody{
+	max-width: 90vw;
+	margin-left: 2.5vw;
+	padding: 2vw;
+	background-color: rgba(0,0,0,0.5);
+	border-top: 1vh solid #02ee5a;
+	border-bottom: 1vh solid #02ee5a;
+}
+/*einde intro pagina opmaak */
 
 
 .post{

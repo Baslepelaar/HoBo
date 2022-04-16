@@ -17,7 +17,7 @@ require_once 'partial/header.php';
                         Youtube: <a href="http://youtube.com/roguemoosic">http://youtube.com/roguemoosic</a><br>
                     </p>
                     <br>
-                    <a href="/stream.php" type="button" class="btn-lg text-decoration-none" style="color:#fff; background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">Bekijken</a>
+                    <a href="stream.php" type="button" class="btn-lg text-decoration-none" style="color:#fff; background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">Bekijken</a>
                     <a href="https://www.imdb.com/title/tt0387808/" type="button" class="btn-lg text-decoration-none" style="color:#000000; background-color: #f3ce13; border-color: #02ee5a; height: 5vh;">imdb</a>
                     <a href="#" type="button" class="btn-lg text-decoration-none" style="color:#fff; background-color: #cc00cc; border-color: #02ee5a; height: 5vh;">favoriet maken</a>
                 </div>
