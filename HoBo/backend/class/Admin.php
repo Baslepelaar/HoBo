@@ -89,11 +89,18 @@ class Admin extends DBConfig
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    function getUserData($id) {
-        $sql 	= "SELECT * FROM users WHERE KlantNr =''".$id."''";
+    function getUserData() {
+        $sql 	= "SELECT * FROM users";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchALL(PDO::FETCH_OBJ);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function getSeries() {
+        $sql 	= "SELECT * FROM serie";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 }
 ?>

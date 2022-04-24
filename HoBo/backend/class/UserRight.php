@@ -63,5 +63,17 @@ class UserRight extends Online {
         }
     }
 
+    function canManageFilms($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_films = '1'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 ?>
