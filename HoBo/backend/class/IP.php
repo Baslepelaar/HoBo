@@ -52,8 +52,8 @@
                 // }
             } else if($getip == "SELECT Ip FROM ip") {
                 try {
-                    $sql = "UPDATE ip SET Ip = :Ip WHERE KlantNr == :KlantNr";
-                    $stmt = $this->connect()->prepare($sql);
+                    $sql = "UPDATE ip SET Ip = :Ip WHERE Ip == :Ip";
+                    $stmt = $this->prepare($sql);
                     $stmt->bindParam(":KlantNr", $id);
                     $stmt->bindParam(":Ip", $getip);
                     $stmt->execute();

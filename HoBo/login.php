@@ -1,10 +1,13 @@
 <?php
     require_once 'partial/header.php';
     require_once 'backend/class/Login.php';
+    session_start();
+
+    $id = $_SESSION['klantnr'];
 
     $is_online = new Online();
 
-    $online = $is_online->getIs_online();
+    $online = $is_online->getIs_online($id);
     $banned = false;
     if($online) {
         $banned = true;

@@ -6,9 +6,11 @@ include('backend/alert.php');
 require_once 'backend/class/Online.php';
 require_once 'backend/class/IP.php';
 
+$id = $_SESSION['klantnr'];
+
 $is_online = new Online();
 
-$online = $is_online->getIs_online();
+$online = $is_online->getIs_online($id);
 $banned = false;
 if($online) {
     $banned = true;
