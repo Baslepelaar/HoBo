@@ -2,12 +2,13 @@
 require_once 'partial/header.php';
 
 session_start();
-require_once 'class/UserRight.php';
+require_once 'class/DelSerie.php';
 require_once 'class/Admin.php';
 require_once 'class/Maintenance.php';
 
 $is_online = new Online();
 $userright = new UserRight();
+$dserie = new DelSerie();
 $admin = new Admin();
 $maintenance = new Maintenance();
 
@@ -77,12 +78,7 @@ if($ip->isIPBanned($getip)) {
             </div>
 
             <div class="box-login" >
-                <h4 style="margin-left: 5%;"><strong>Series</strong>
-                    <?php
-                    if($userright->canAddFilms($id)) {
-                        echo '<a href="add-mtp-post.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
-                    }
-                    ?>						</h4>
+                <h4 style="margin-left: 5%;"><strong>Series</strong></h4>
                 <center><hr style="width: 90%;"></center>
                 <div style="margin-left: 5%; margin-right: 5%;">
                     <table class="table table-striped">
@@ -100,12 +96,13 @@ if($ip->isIPBanned($getip)) {
                                 <td><a href="<?= $singleSerie->IMDBLink?>"><?= $singleSerie->IMDBLink ?></a></td>
                                 <td>
                                     <?php
-                                    if($singleSerie->Active == '1') {
-                                        echo ' <span class="label label-success">Active</span>';
-                                    }
-                                    else {
-                                        echo ' <span class="label label-danger">Unactive</span>';
-                                    }
+                                    $dserie->delSerie();
+//                                    if($singleSerie->Actief == '1') {
+//                                        echo '<a href="delSerie.php?serie='.$singleSerie->SerieID.'&data=1" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a>';
+//                                    }
+//                                    else {
+//                                        echo '<a href="DelSerie.php?serie='.$singleSerie->SerieID.'&data=0" style="margin-left: 10px;"><span class="label label-success">Post again</span></a>';
+//                                    }
                                     ?>
                                 </td>
                             </tr>
