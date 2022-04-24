@@ -96,13 +96,13 @@ if($ip->isIPBanned($getip)) {
                                 <td><a href="<?= $singleSerie->IMDBLink?>"><?= $singleSerie->IMDBLink ?></a></td>
                                 <td>
                                     <?php
-                                    $dserie->delSerie();
-//                                    if($singleSerie->Actief == '1') {
-//                                        echo '<a href="delSerie.php?serie='.$singleSerie->SerieID.'&data=1" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a>';
-//                                    }
-//                                    else {
-//                                        echo '<a href="DelSerie.php?serie='.$singleSerie->SerieID.'&data=0" style="margin-left: 10px;"><span class="label label-success">Post again</span></a>';
-//                                    }
+//                                    $dserie->delSerie();
+                                    if($singleSerie->Actief == '1') {
+                                        echo '<a href="delSerie.php?serie='.$singleSerie->SerieID.'&data=1" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a>';
+                                    }
+                                    else {
+                                        echo '<a href="DelSerie.php?serie='.$singleSerie->SerieID.'&data=0" style="margin-left: 10px;"><span class="label label-success">Post again</span></a>';
+                                    }
                                     ?>
                                 </td>
                             </tr>
