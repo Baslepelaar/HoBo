@@ -38,6 +38,11 @@
               <div><img src="img/tijd512.png" style="height: 2rem; justify-content: center;"></div>
               </a>
             </li>
+            <li class="btn-sm">
+              <a href="destroy.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+              <div><img src="img/logout.png" style="height: 2rem; justify-content: center;"></div>
+              </a>
+            </li>
           </ul>
         </div>
 
