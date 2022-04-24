@@ -13,7 +13,7 @@
 
     $id = $_SESSION['klantnr'];
 
-    $online = $is_online->getIs_online();
+    $online = $is_online->getIs_online($id);
     $banned = false;
     if($online) {
         $banned = true;
@@ -172,8 +172,8 @@
                     <center><hr style="width: 90%;"></center>
                     <div style="margin-left: 5%; margin-right: 5%;">
                         <?php
-                        if(canManageUsers($_SESSION['id'])) {
-                            echo '<h5>Go to the users list... <a href="staff-users-list.php"><span class="label label-info">Click here</span></a></h5>';
+                        if($userright->canManageUsers($id)) {
+                            echo '<h5>Go to the users list... <a href="admin-users-list.php"><span class="label label-info">Click here</span></a></h5>';
                         }
                         else {
                             echo '<h5>You are not allowed to manage users. If this is wrong you can contact a site administrator.</h5>';
@@ -183,10 +183,10 @@
                     </div>
                 </div>
                 <div class="box-login" >
-                    <h4 style="margin-left: 5%;"><strong>MineThemepark Posts</strong>
+                    <h4 style="margin-left: 5%;"><strong>Series</strong>
                         <?php
-                        if(canWritePost($_SESSION['id'])) {
-                            echo '<a href="add-mtp-post.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Write Post</span></a>';
+                        if($userright->canAddFilms($id)) {
+                            echo '<a href="add-mtp-post.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
                         }
                         ?>						</h4>
                     <center><hr style="width: 90%;"></center>

@@ -8,16 +8,16 @@ require_once 'backend/class/IP.php';
 
 $id = $_SESSION['klantnr'];
 
-$is_online = new Online();
-
-$online = $is_online->getIs_online($id);
-$banned = false;
-if($online) {
-    $banned = true;
-}
-if($banned) {
-    header('Location: index.php');
-}
+//$is_online = new Online();
+//
+//$online = $is_online->getIs_online($id);
+//$banned = false;
+//if($online) {
+//    $banned = true;
+//}
+//if($banned) {
+//    header('Location: index.php');
+//}
 
 $ip = new IP();
 

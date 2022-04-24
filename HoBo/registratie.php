@@ -3,16 +3,16 @@
     require_once 'backend/class/Register.php';
 
     session_start();
-    $is_online = new Online();
-
-    $online = $is_online->getIs_online();
-    $banned = false;
-    if($online) {
-        $banned = true;
-    }
-    if($banned) {
-        header('Location: index.php');
-    }
+//    $is_online = new Online();
+//
+//    $online = $is_online->getIs_online();
+//    $banned = false;
+//    if($online) {
+//        $banned = true;
+//    }
+//    if($banned) {
+//        header('Location: index.php');
+//    }
 
     $Register = new Register();
 
