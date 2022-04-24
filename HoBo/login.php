@@ -17,7 +17,7 @@
 
     $getip = $ip->get_client_ip();
 
-    $ip->addIPtoList($getip);
+    $ip->addIPtoList($getip, $id);
     if($ip->isIPBanned($getip)) {
         header('Location: https://google.com');
     }

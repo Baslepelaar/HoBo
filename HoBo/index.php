@@ -22,7 +22,7 @@ $ip = new IP();
 $getip = $ip->get_client_ip();
 
 //die(var_dump($getip));
-$ip->addIPtoList($getip, $_SESSION['klantnr']);
+$ip->addIPtoList($getip, $id);
 if($ip->isIPBanned($getip)) {
     header('Location: https://google.com');
 }
