@@ -93,15 +93,14 @@ if($ip->isIPBanned($getip)) {
                         <?php foreach($admin->getSeries() as $singleSerie){ ?>
                             <tr>
                                 <td><a href="serie.php?id="><?= $singleSerie->SerieTitel ?></a></td>
-                                <td><a href="<?= $singleSerie->IMDBLink?>"><?= $singleSerie->IMDBLink ?></a></td>
+                                <td><a href="<?= $singleSerie->IMDBLink?>" target="_blank"><?= $singleSerie->IMDBLink ?></a></td>
                                 <td>
                                     <?php
-//                                    $dserie->delSerie();
                                     if($singleSerie->Actief == '1') {
-                                        echo '<a href="delSerie.php?serie='.$singleSerie->SerieID.'&data=1" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a>';
+                                        echo '<a href="service/serieHandler.php?serie='.$singleSerie->SerieID.'&user=' . $id . '&change=delete" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a>';
                                     }
                                     else {
-                                        echo '<a href="DelSerie.php?serie='.$singleSerie->SerieID.'&data=0" style="margin-left: 10px;"><span class="label label-success">Post again</span></a>';
+                                        echo '<a href="service/serieHandler.php?serie='.$singleSerie->SerieID.'&user=' . $id . '&change=restore" style="margin-left: 10px;"><span class="label label-success">Post again</span></a>';
                                     }
                                     ?>
                                 </td>

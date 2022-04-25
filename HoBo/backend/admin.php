@@ -162,7 +162,7 @@
                                 <tr>
                                     <td><a href="users.php?id="><?= $singleAdmin->Voornaam . " " .  $singleAdmin->Achternaam . ", " . $singleAdmin->Tussenvoegsel  ?></a></td>
                                     <td><?= $singleAdmin->Rank ?></td>
-                                    <td><a href="staff-manage.php?id=<?= $singleAdmin->User_ID ?>"><span class="label label-info">Manage Staff</span></a> <a href="core/staff-del-member.php?id=<?= $singleAdmin->User_ID ?>" style="margin-left: 10px;"><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="staff-manage.php?id=<?= $singleAdmin->User_ID ?>"><span class="label label-info">Manage Staff</span></a><?php echo '<a href="service/delAdmin.php?admin='.$singleAdmin->User_ID.'&user=' . $id . '&change=delete" style="margin-left: 10px;">'?><span class="label label-danger">Delete</span></a></td>
                                 </tr>
                             <?php } }?>
                             </tbody>
