@@ -1,7 +1,10 @@
 <?php
 require_once 'partial/header.php';
+require_once 'backend/class/Series.php';
 session_start();
 include('backend/alert.php');
+
+$serie = New Serie();
 
 ?>
 
@@ -25,15 +28,15 @@ include('backend/alert.php');
             <article class="col-md-5 col-sm-2 filmtekst" style="margin-left: 5vw; margin-top: 5vh;">
             <input type="submit" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="abonnement" value="Begin met kijken">
     </article>
-    <article class="col-md-10 col-sm-2 row" style="margin-left: 5vw; margin-top: 5vh; color: white;"><h2>Gallery</h2>
-      <article class="col-md-3 col-sm-2 img1"><img src="img/image 1.jpg" style="height: 30vh; border-radius: 1vw;"></article>
-      <article class="col-md-3 col-sm-2 img2"><img src="img/image 2.jpg" style="height: 30vh; border-radius: 1vw;"></article>
-      <article class="col-md-3 col-sm-2 img3"><img src="img/image 3.jpg" style="height: 30vh; border-radius: 1vw;"></article>
-      <article class="col-md-3 col-sm-2 img5"><img src="img/image 5.jpg" style="height: 30vh; border-radius: 1vw;"></article>
+    <article class="col-md-10 justify-content-center" style="margin-left: 5vw; margin-top: 5vh; color: white;"><h2>Series</h2>
+    <?php foreach($post->getSeries() as $serie){ ?>
+          <article class="info" style="margin-top: 3vw; background-color: lightblue;">
+          <h1><?php echo $serie->SerieTitel; ?></h1>
+          <?php } ?>
     </article>
   </section>
   </main>
 </body>
 <?php
 require_once 'partial/footer.php';
-?>  
+?>

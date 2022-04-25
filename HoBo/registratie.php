@@ -39,7 +39,7 @@ include('backend/alert.php');
   <div class="row w-100 h-100 justify-content-center mt-5">
   <form id="contact-form" name="contact-form" method="POST">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col">
+      <div class="col-md-10">
         <div class="card card-registration my-4" style="border-radius: 2vh; border: black solid 0px;">
           <div class="row g-0">
             <div class="col-xl-6 d-none d-xl-block">
