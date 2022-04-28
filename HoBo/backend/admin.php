@@ -116,11 +116,7 @@
                 </div>
             </div>
             <div class="col-sm-9">
-<<<<<<< Updated upstream
                 <?php include('inc/alert.php'); ?>
-=======
-<!--                --><?php //include('alert.php'); ?>
->>>>>>> Stashed changes
                 <div class="box-login" >
                     <h4 style="margin-left: 5%;"><strong>Settings</strong></h4>
                     <center><hr style="width: 90%;"></center>
