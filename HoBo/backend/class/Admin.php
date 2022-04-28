@@ -1,14 +1,14 @@
 <?php
 
-require_once 'DBConfig.php';
+require_once 'UserRight.php';
 
-class Admin extends DBConfig
+class Admin extends UserRight
 {
 
     function countUsers()
     {
 
-        $sql = "SELECT KlantNr FROM `users` WHERE `active`='1' AND `banned`='0'";
+        $sql = "SELECT * FROM `users` WHERE `active`='1' AND `banned`='0'";
         $result = connection()->query($sql);
         $count = mysqli_num_rows($result);
 
@@ -79,6 +79,30 @@ class Admin extends DBConfig
         }
     }
 
+    public function deleteAdmin($userId, $adminId) {
+
+//        die(var_dump($userId));
+        if($this->canManageStaff($userId)) {
+
+            $sql = "SELECT * FROM userrights WHERE User_ID = :adminId";
+
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->bindParam(':adminId', $adminId);
+            $stmt->execute();
+            $serieDel = $stmt->fetch(PDO::FETCH_OBJ);
+            if($serieDel->Actief == 1){
+                $sql = "DELETE FROM userrights WHERE User_ID = :adminId";
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->bindParam(':adminId', $adminId);
+                $stmt->execute();
+
+                header('Location: ../admin.php?id='.$adminId.'&success=The user is successfully deleted.');
+            } else {
+                header('Location: ../admin.php?danger=We cant find that User.');
+            }
+        }
+    }
+
     public function getAdmin() {
         $sql = "SELECT * FROM userrights
                 JOIN users ON 
@@ -90,7 +114,14 @@ class Admin extends DBConfig
     }
 
     function getUserData() {
-        $sql = "SELECT * FROM users ORDER BY KlantNr ";
+        $sql 	= "SELECT * FROM users";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    function getSeries() {
+        $sql 	= "SELECT * FROM serie";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);

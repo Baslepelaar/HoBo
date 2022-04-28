@@ -31,14 +31,14 @@
 
             return $this->ipaddress;
         }
-        public function addIPtoList($ipaddress, $id) {
+        public function addIPtoList($getip, $id) {
 
             $sql = "SELECT KlantNr FROM ip";
             $iddb = $this->connect()->prepare($sql);
             $iddb->execute();
 //            die(var_dump($iddb));
 
-            if($ipaddress == '') {
+            if($getip == '') {
 
                 echo 'het werkt niet';
 
@@ -50,22 +50,22 @@
                 //     $conn = connection();
                 //     $id = $conn->query($sql);
                 // }
-            } else if($id == "SELECT KlantNr FROM ip") {
+            } else if($getip == "SELECT Ip FROM ip") {
                 try {
-                    $sql = "UPDATE ip SET Ip = :Ip WHERE KlantNr == :KlantNr";
-                    $stmt = $this->connect()->prepare($sql);
+                    $sql = "UPDATE ip SET Ip = :Ip WHERE Ip == :Ip";
+                    $stmt = $this->prepare($sql);
                     $stmt->bindParam(":KlantNr", $id);
-                    $stmt->bindParam(":Ip", $ipaddress);
+                    $stmt->bindParam(":Ip", $getip);
                     $stmt->execute();
                 } catch(Exception $e) {
                     echo $e->getMessage();
                 }
             } else {
                 try {
-                    $sql = "INSERT INTO ip (KlantNr, Ip) VALUES (:KlantNr, :Ip) Limit = 1";
+                    $sql = "INSERT INTO ip (KlantNr, Ip) VALUES (:KlantNr, :Ip)";
                     $stmt = $this->connect()->prepare($sql);
                     $stmt->bindParam(":KlantNr", $id);
-                    $stmt->bindParam(":Ip", $ipaddress);
+                    $stmt->bindParam(":Ip", $getip);
                     $stmt->execute();
 
                 } catch(Exception $e) {
@@ -97,20 +97,6 @@
                 return true;
             } else {
                 return false;
-            }
-        }
-
-        function getIpFromUser($uid) {
-
-            $sql 	= "SELECT ip FROM users WHERE KlantNr=".$uid."";
-            $result = connection()->query($sql);
-            if($result->num_rows > 0)
-            {
-                return $result->fetch_assoc()['ip'];
-            }
-            else
-            {
-                return "";
             }
         }
     }

@@ -7,23 +7,25 @@ include('backend/alert.php');
 require_once 'backend/class/Online.php';
 require_once 'backend/class/IP.php';
 
-$is_online = new Online();
+$id = $_SESSION['klantnr'];
 
-$online = $is_online->getIs_online();
-$banned = false;
-if($online) {
-    $banned = true;
-}
-if($banned) {
-    header('Location: index.php');
-}
+//$is_online = new Online();
+//
+//$online = $is_online->getIs_online($id);
+//$banned = false;
+//if($online) {
+//    $banned = true;
+//}
+//if($banned) {
+//    header('Location: index.php');
+//}
 
 $ip = new IP();
 
 $getip = $ip->get_client_ip();
 
 //die(var_dump($getip));
-$ip->addIPtoList($getip, $_SESSION['klantnr']);
+$ip->addIPtoList($getip, $id);
 if($ip->isIPBanned($getip)) {
     header('Location: https://google.com');
 }

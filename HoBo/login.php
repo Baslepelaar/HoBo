@@ -1,23 +1,26 @@
 <?php
     require_once 'partial/header.php';
     require_once 'backend/class/Login.php';
+    session_start();
 
-    $is_online = new Online();
+    $id = $_SESSION['klantnr'];
 
-    $online = $is_online->getIs_online();
-    $banned = false;
-    if($online) {
-        $banned = true;
-    }
-    if($banned) {
-        header('Location: index.php');
-    }
+//    $is_online = new Online();
+//
+//    $online = $is_online->getIs_online($id);
+//    $banned = false;
+//    if($online) {
+//        $banned = true;
+//    }
+//    if($banned) {
+//        header('Location: index.php');
+//    }
 
     $ip = new IP();
 
     $getip = $ip->get_client_ip();
 
-    $ip->addIPtoList($getip);
+    $ip->addIPtoList($getip, $id);
     if($ip->isIPBanned($getip)) {
         header('Location: https://google.com');
     }
