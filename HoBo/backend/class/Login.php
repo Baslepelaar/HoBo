@@ -17,18 +17,18 @@ class Login extends Online {
             $user = $this->getUser($data['email']);
 //            die(var_dump($user));
             if(!$user) {
-                header("Location: login.php?login=danger");
+                header("Location: login.php?alert=danger&message=Gebruiker bestaat niet");
                 throw new Exception("Danger");
             }
             if(!password_verify($data['password'], $user->Password)) {
-                header("Location: login.php?login=danger");
+                header("Location: login.php?alert=danger&message=U wachtwoord is incorrect");
                 throw new Exception("Danger");
             }
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $user->Email;
             $_SESSION['klantnr'] = $user->KlantNr;
-            header("Location: index.php?login=success");
+            header("Location: index.php?alert=success&message=U bent ingelogd");
         } catch(Exception $e) {
             return $e->getMessage();
         }

@@ -1,30 +1,11 @@
 <?php
 /* Alert */
 //session_start();
-if(isset($_GET['login']) && $_GET['login'] == 'success') {
+if(isset($_GET['alert']) && isset($_GET['message'])) {
     ?>
-    <div class="alert alert-success alert-dismissable fade in">
-        <a href="?" class="close" data-dismiss="alert" aria-label="close">&times;</a>U bent ingelogd
+    <div class="alert alert-<?php echo $_GET['alert'] ?> alert-dismissable fadein" style="margin-bottom: 0rem;">
+        <a href="?" class="close" data-dismiss="alert" aria-label="close">&times;</a> <?php echo $_GET['message'] ?>
     </div>
 <?php
-}
-if(isset($_GET["login"]) && $_GET['login'] == 'info') {
-    ?>
-    <div class="alert alert-info alert-dismissable fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    </div>
-<?php	}
-if(isset($_GET["login"]) && $_GET['login'] == 'warning') {
-    ?>
-    <div class="alert alert-warning alert-dismissable fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    </div>
-<?php	}
-if(isset($_GET["login"]) && $_GET['login'] == 'danger') {
-    ?>
-    <div class="alert alert-danger alert-dismissable fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Kon niet inloggen, gebruikersnaam of wachtwoord incorrect
-    </div>
-    <?php
 }
 ?>

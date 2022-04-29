@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f92bfef8-d908-4c5c-bebe-ca91352f4dfa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/class/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/class/DelSerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/DelSerie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/class/Maintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/Maintenance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/del_serie.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/serie-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/serie-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alert.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/alert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/class/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +54,7 @@
       <workItem from="1649932447364" duration="12000" />
       <workItem from="1650794093364" duration="15643000" />
       <workItem from="1650868417097" duration="8023000" />
+      <workItem from="1651222232753" duration="3013000" />
     </task>
     <servers />
   </component>
