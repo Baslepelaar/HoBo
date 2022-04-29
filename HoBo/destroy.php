@@ -6,7 +6,7 @@ session_start();
 $_SESSION = array(); //hele sessie variable in een lege array stoppen
 
 session_destroy(); //volledige sessie vernietigen
-header( "refresh:2; url=intro.php" ); 
+header( "refresh:2; url=index.php" ); 
 ?>
 
 <main>
