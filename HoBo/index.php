@@ -6,7 +6,11 @@ include('backend/alert.php');
 require_once 'backend/class/Online.php';
 require_once 'backend/class/IP.php';
 
-$id = $_SESSION['klantnr'];
+$id = '';
+
+if(isset($_SESSION['klantnr'])){
+    $id = $_SESSION['klantnr'];
+}
 
 //$is_online = new Online();
 //

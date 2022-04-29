@@ -1,8 +1,13 @@
 <?php
     require_once 'partial/header.php';
     require_once 'backend/class/Register.php';
-
     session_start();
+
+    $id = '';
+
+    if(isset($_SESSION['klantnr'])){
+        $id = $_SESSION['klantnr'];
+    }
 //    $is_online = new Online();
 //
 //    $online = $is_online->getIs_online();
@@ -26,7 +31,7 @@
 
     $getip = $ip->get_client_ip();
 
-    $ip->addIPtoList($getip);
+    $ip->addIPtoList($getip, $id);
     if($ip->isIPBanned($getip)) {
         header('Location: https://google.com');
     }

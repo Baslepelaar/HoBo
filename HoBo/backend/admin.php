@@ -13,7 +13,11 @@
     $admin = new Admin();
     $maintenance = new Maintenance();
 
-    $id = $_SESSION['klantnr'];
+    $id = '';
+
+    if(isset($_SESSION['klantnr'])){
+        $id = $_SESSION['klantnr'];
+    }
 
     $online = $is_online->getIs_online($id);
     $banned = false;
@@ -188,9 +192,10 @@
                     <h4 style="margin-left: 5%;"><strong>Series</strong>
                         <?php
                         if($userright->canAddFilms($id)) {
-                            echo '<a href="add-mtp-post.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
+                            echo '<a href="add-serie.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
                         }
                         ?>	</h4>
+
                     <center><hr style="width: 90%;"></center>
                     <div style="margin-left: 5%; margin-right: 5%;">
                         <?php
