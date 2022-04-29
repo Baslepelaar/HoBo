@@ -3,7 +3,11 @@
     require_once 'backend/class/Login.php';
     session_start();
 
-    $id = $_SESSION['klantnr'];
+    $id = '';
+
+    if(isset($_SESSION['klantnr'])){
+        $id = $_SESSION['klantnr'];
+    }
 
 //    $is_online = new Online();
 //
