@@ -46,7 +46,7 @@ $id = $_SESSION['klantnr'];
               ?>
             </li>
             <li class="btn-sm">
-              <a href="test.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+              <a href="search.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
               <div><img src="img/vergroot512.png" style="height: 2rem;"></div>
               </a>
             </li>

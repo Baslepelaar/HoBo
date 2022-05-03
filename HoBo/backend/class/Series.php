@@ -25,6 +25,13 @@
 
             }
 
+            public function searchSerie($search){
+                $sql = "SELECT * FROM serie WHERE SerieTitel LIKE '%" . $search . "%'" ;
+                $connExec = $this->connect()->prepare($sql);
+                $connExec->execute();
+                return $connExec->fetchAll(PDO::FETCH_OBJ);
+            }
+
 
 
             
