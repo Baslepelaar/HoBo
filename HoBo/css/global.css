@@ -188,6 +188,7 @@ main{
 	align-self: center;
 	flex-direction: column;
 	border-bottom: 1px solid black;
+	color:#f1f1f1;
 	width: 70%;
 	margin: 10px 0;
 }
@@ -199,7 +200,7 @@ main{
 }
 
 .post a:hover{
-	color: blue;
+	color: #02ee5a;
 }
 
 .form-container{

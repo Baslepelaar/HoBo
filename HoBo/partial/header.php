@@ -28,32 +28,38 @@ $id = $_SESSION['klantnr'];
       <div class="d-flex flex-shrink-0 align-items-center" >
           <ul class="nav nav-pills mb-auto text-center">
             <li class="nav-item btn-sm">
-              <a href="index.php" class="nav-link active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+              <a href="index.php" class="nav-link" style="background-color:#02ee5a" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right">
               <div class="align-items-center"><img src="img/home.png" style="height: 2rem;"></div>
               </a>
             </li>
             <li class="btn-sm">
               <?php 
                 if(isset($_SESSION['loggedin'])){ ?>
-                  <a href="abonnementen.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                  <a href="abonnementen.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
                   <div><img src="img/pop512.png" style="height: 2rem;"></div>
                   </a>
                 <?php } else{ ?>
-              <a href="login.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+              <a href="login.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
               <div><img src="img/pop512.png" style="height: 2rem;"></div>
               </a>
                 <?php }
               ?>
             </li>
             <li class="btn-sm">
-              <a href="search.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
-              <div><img src="img/vergroot512.png" style="height: 2rem;"></div>
-              </a>
+              <?php 
+                if(isset($_SESSION['loggedin'])){ ?>
+                  <a href="search.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <div><img src="img/vergroot512.png" style="height: 2rem;"></div>
+                  </a>
+              <?php } ?>
             </li>
             <li class="btn-sm">
-              <a href="test.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
-              <div><img src="img/tijd512.png" style="height: 2rem; justify-content: center;"></div>
-              </a>
+              <?php 
+                if(isset($_SESSION['loggedin'])){ ?>
+                  <a href="history.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <div><img src="img/tijd512.png" style="height: 2rem; justify-content: center;"></div>
+                  </a>
+              <?php } ?>  
             </li>
             <li class="btn-sm">
             <?php 

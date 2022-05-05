@@ -34,3 +34,7 @@ if(isset($_POST['searchButton'])){
         <?php } } ?>
 </main>
 
+<?php
+require_once 'partial/footer.php';
+?>
+

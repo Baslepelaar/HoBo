@@ -10,7 +10,7 @@ $series = $getSeries->getSerie();
 ?>
 
 <main>
-<?php 
+    <?php 
       foreach($series as $serieRow){ ?>
       <section class="post">
         <article class="info">
@@ -21,4 +21,7 @@ $series = $getSeries->getSerie();
         </article>
       </section>
       <?php } ?>
-      </main>
+</main>
+<?php
+require_once 'partial/footer.php';
+?>
