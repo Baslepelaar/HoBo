@@ -5,11 +5,11 @@ require_once 'backend/class/series.php';
 $GrabHistory = new series();
 
 $InsertHistory = $GrabHistory->setHistory($_GET['serie']);
-
-echo $_SESSION['Klantnr'];
+//hierin word de serie ID gepakt uit de web balk en weggeschreven in de geschiedenis tabel in de database
 
 ?>
     <main>
+        <!-- standaard youtube embed -->
         <div class="videostream ratio ratio-16x9">
             <iframe
               class="embed-responsive-item"

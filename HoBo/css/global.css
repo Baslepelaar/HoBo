@@ -153,12 +153,13 @@ main{
 
 .videostreamSum{
 	box-shadow: -35px 5px 150px #0c0c0c;
+	/* schaduw achter de video in de summary pagina */
 }
 /* einde summary pagina opmaak */
 
 /* streaming pagina opmaak */
 .videostream{
-	height: 80%;
+	height: 80%; /* om te beperken dat de video veel groter word dan de scherm zelf */
 }
 /* einde streaming pagina opmaak */
 
@@ -169,7 +170,7 @@ main{
 	line-height: 1vh;
 	min-height:95vh;
 	text-shadow: 1px 1px 10px #0c0c0c;
-	background: linear-gradient(0deg, rgba(2,238,90,1), rgba(0,0,0,0) 95%);
+	background: linear-gradient(0deg, rgba(2,238,90,1), rgba(0,0,0,0) 95%); /* groene achtergrond met alpha  */
 
 }
 
@@ -177,8 +178,8 @@ main{
 	max-width: 90vw;
 	margin-left: 2.5vw;
 	padding: 2vw;
-	background-color: rgba(0,0,0,0.5);
-	border-top: 1vh solid #02ee5a;
+	background-color: rgba(0,0,0,0.5); /* zwarte achtergrondachter de text */
+	border-top: 1vh solid #02ee5a; /* groene randen rondom de text dozen */
 	border-bottom: 1vh solid #02ee5a;
 }
 /*einde intro pagina opmaak */

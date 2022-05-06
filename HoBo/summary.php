@@ -6,16 +6,18 @@ $getSerie = new Series();
 
 $serieImdb = $getSerie->getSerieImdb();
 
-$serieRow = $serieImdb[0];
+$serieRow = $serieImdb[0]; 
+//er is maar alleen één sleutel met gegevens, 
+//die is in deze varabele geplaatst om undefined property foutmelding te voorkomen
 
 ?>
     <main>
         <div class="d-flex summaryMain justify-content-between">
         <div class="m-5 summaryText">
-                <h1><b>Rogue - Rattlesnake [Monstercat Release]</b></h1>
+                <h1><b><?php echo $serieRow->SerieTitel; ?></b></h1>
                 <div class="align-items-center">
                     <p>
-                        <?php echo $serieRow->SerieTitel . '<br>' . $serieRow->SerieID . '<br>'; ?>
+                        <!-- willekeurige beschrijving omdat de database geen beschrijvingen heeft -->
                         some tunes from rogue, sounds pretty awesome.<br>
                         it might not sound cool to you though<br>
                         <br><br>
@@ -27,6 +29,7 @@ $serieRow = $serieImdb[0];
                     </p>
                     <br>
                     <a href="<?php echo 'stream.php?serie=' . $serieRow->SerieID; ?>" type="button" class="btn-lg text-decoration-none" style="color:#fff; background-color: #02ee5a; border-color: #02ee5a; height: 5vh;">Bekijken</a>
+                    <!-- serieID word in web balk variabele geplaatst, dit is nodig voor verschillende functies-->
                     <a href=<?php echo $serieRow->IMDBLink ?> type= "button" class="btn-lg text-decoration-none" style="color:#000000; background-color: #f3ce13; border-color: #02ee5a; height: 5vh;">imdb</a>
                     <a href="#" type="button" class="btn-lg text-decoration-none" style="color:#fff; background-color: #cc00cc; border-color: #02ee5a; height: 5vh;">favoriet maken</a>
                 </div>

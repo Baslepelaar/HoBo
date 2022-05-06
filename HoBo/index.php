@@ -6,7 +6,8 @@ include('backend/alert.php');
 ?>
 
 <?php 
-    if(isset($_SESSION['loggedin'])){ ?>
+    if(isset($_SESSION['loggedin'])){ ?> 
+    <!-- dit stukje code hierboven controleert of je wel of niet bent ingelogd, zo ja, laat de index zien als je bent ingelogd, zo niet, laat dan de introductie pagina zien -->
       <body>
     <main>
     <article class="bg-image" style="background-image: url('img/SW-banner.png');height: 100vh; background-size: cover; -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
@@ -47,6 +48,7 @@ include('backend/alert.php');
   </main>
 </body>
     <?php } else{ ?>
+      <!-- als je niet bent ingelogd dan krijg je de introductie pagina te zien hier beneden -->
       <main>
         <div class="megaBox bg-image" style="background-image: url('img/FvF.png'); height: 100vh; background-size: cover;">
             <div class="mt-5 flex-row justify-content-center introMain">

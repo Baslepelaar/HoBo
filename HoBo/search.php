@@ -8,6 +8,7 @@ $getSearch = new series();
 
 if(isset($_POST['searchButton'])){
     $searchRequest = $getSearch->searchSerie($_POST['searchText']);
+    //wat in de invoer balk is ingevoerd word meegestuurd naar de query
 }
 
 ?>
@@ -21,8 +22,8 @@ if(isset($_POST['searchButton'])){
             </form>
         </article>
     </section>
-        <?php if(isset($_POST['searchButton'])){
-            foreach($searchRequest as $searchHit){ ?>
+        <?php if(isset($_POST['searchButton'])){ //zodra de zoek! knop word ingedrukt word pas de query uitgevoerd
+            foreach($searchRequest as $searchHit){ ?> <!-- voor elke zoek resultaat (rij) maakt het een nieuwe section aan met de gegevens in de rij -->
             <section class="post mt-3">
                 <article class="info">
                 <a href="<?php echo 'summary.php?serie=' . $searchHit->SerieID; ?>">
