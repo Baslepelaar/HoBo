@@ -1,24 +1,7 @@
-\<?php
-//$bg = array('bg-01.png', 'bg-02.png', 'bg-03.png', 'bg-04.png', ); // array of filenames
-//
-//$i = rand(0, count($bg)-1); // generate random number size of the array
-//$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-
-include('backend/functions.php');
-if(getMaintenance() != '1') {
-    header('Location: index.php');
-}
-
-//$user_ip = get_client_ip();
-//addIPtoList($user_ip);
-//if(isIPBanned($user_ip)){
-//    header('Location: https://google.com');
-//}
+<?php
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Made by MineThemepark -->
 
     <!-- Meta -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />

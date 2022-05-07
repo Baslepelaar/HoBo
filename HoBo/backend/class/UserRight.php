@@ -39,5 +39,41 @@ class UserRight extends Online {
         }
     }
 
+    function canManageUsers($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_users = '1'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function canAddFilms($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_add_films = '1'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function canManageFilms($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id AND Can_manage_films = '1'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 ?>

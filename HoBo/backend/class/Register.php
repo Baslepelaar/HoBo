@@ -6,7 +6,7 @@
 
         public function create($data) {
             try {
-                if($data['password'] != $data['conf-password']) {
+                if($data['password'] != $data['password-conf']) {
                     throw new Exception("Wachtworden zijn niet het zelfde.");
                 }
                 $passwordEncrypt = password_hash($data['password'], PASSWORD_BCRYPT, ['cost' => 12]);
