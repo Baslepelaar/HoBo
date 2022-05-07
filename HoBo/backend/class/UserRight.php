@@ -75,5 +75,29 @@ class UserRight extends Online {
         }
     }
 
+    function isAdmin($id) {
+        $sql = "SELECT * FROM userrights WHERE User_ID = :id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        if(sizeof($stmt->fetchAll(PDO::FETCH_OBJ)) > 0) {
+            $sql 	= "SELECT rank FROM userrights WHERE User_ID = :id";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        } else {
+            return false;
+        }
+    }
+
+    function getAdminRank($id) {
+        $sql = "SELECT Rank FROM userrights WHERE User_ID = :id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
 }
 ?>
