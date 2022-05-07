@@ -190,7 +190,7 @@
                     <h4 style="margin-left: 5%;"><strong>Series</strong>
                         <?php
                         if($userright->canAddFilms($id)) {
-                            echo '<a href="add-serie.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
+                            echo '<a href="uploadSerie.php" style="margin-left: 20px;"><span class="btn btn-success btn-sm" >Add Film</span></a>';
                         }
                         ?>	</h4>
 

@@ -72,7 +72,7 @@ if($ip->isIPBanned($getip)) {
             <li class="btn-sm">
               <?php 
                 if(isset($_SESSION['loggedin'])){ ?>
-                  <a href="abonnementen.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <a href="profile.php" class="nav-link bg-secondary" title="" data-bs-toggle="tooltip" data-bs-placement="right">
                   <div><img src="img/pop512.png" style="height: 2rem;"></div>
                   </a>
                 <?php } else{ ?>
