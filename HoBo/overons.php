@@ -1,6 +1,5 @@
 <?php
 require_once 'partial/header.php';
-session_start();
 include('backend/alert.php');
 
 ?>

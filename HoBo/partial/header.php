@@ -4,8 +4,37 @@ require_once 'backend/class/UserRight.php';
 
 $userright = new UserRight();
 
-$id = $_SESSION['klantnr'];
-?>
+
+require_once 'backend/class/Online.php';
+require_once 'backend/class/IP.php';
+
+$id = '';
+
+if(isset($_SESSION['klantnr'])){
+    $id = $_SESSION['klantnr'];
+}
+
+//$is_online = new Online();
+//
+//$online = $is_online->getIs_online($id);
+//$banned = false;
+//if($online) {
+//    $banned = true;
+//}
+//if($banned) {
+//    header('Location: index.php');
+//}
+
+$ip = new IP();
+
+$getip = $ip->get_client_ip();
+
+//die(var_dump($getip));
+$ip->addIPtoList($getip, $id);
+if($ip->isIPBanned($getip)) {
+    header('Location: https://google.com');
+}
+//$serie = New Serie();?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,8 +1,6 @@
 <?php
 require_once 'partial/header.php';
 
-session_start();
-
 $_SESSION = array(); //hele sessie variable in een lege array stoppen
 
 session_destroy(); //volledige sessie vernietigen

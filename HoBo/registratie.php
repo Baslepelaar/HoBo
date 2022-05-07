@@ -1,23 +1,6 @@
 <?php
     require_once 'partial/header.php';
     require_once 'backend/class/Register.php';
-    session_start();
-
-    $id = '';
-
-    if(isset($_SESSION['klantnr'])){
-        $id = $_SESSION['klantnr'];
-    }
-//    $is_online = new Online();
-//
-//    $online = $is_online->getIs_online();
-//    $banned = false;
-//    if($online) {
-//        $banned = true;
-//    }
-//    if($banned) {
-//        header('Location: index.php');
-//    }
 
     $Register = new Register();
 
@@ -25,15 +8,6 @@
 //    var_dump($User);
     if(isset($_POST['register'])) {
         $Register->create($_POST);
-    }
-
-    $ip = new IP();
-
-    $getip = $ip->get_client_ip();
-
-    $ip->addIPtoList($getip, $id);
-    if($ip->isIPBanned($getip)) {
-        header('Location: https://google.com');
     }
 
 ?>
