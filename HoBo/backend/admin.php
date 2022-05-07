@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="col-sm-9">
-<!--                --><?php //include('inc/alert.php'); ?>
+                <?php include('alert.php'); ?>
                 <div class="box-login" >
                     <h4 style="margin-left: 5%;"><strong>Settings</strong></h4>
                     <center><hr style="width: 90%;"></center>
@@ -150,8 +150,6 @@
                     <div style="margin-left: 5%; margin-right: 5%;">
                         <?php
                         if($userright->canManageStaff($id)) {
-//                            require_once('core/ini.php');
-                            ;
                             ?>
                         <table class="table table-striped">
                             <thead>
@@ -210,5 +208,3 @@
             </div>
         </div>
     </div>
-
-<?php require_once 'partial/footer.php'; ?>

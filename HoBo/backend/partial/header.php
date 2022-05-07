@@ -6,7 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="author" content="Bas, William, Mathieu">
       <meta name="keywords" content="html,css-- mijn eigen website">
-      <title>Ra site</title>
+      <title>Hobo | Admin paneel</title>
+      <link rel="icon" type="image/png" href="../img/Logo.png" />
       <link rel="stylesheet" href="../css/back.css">
       <script src="https://kit.fontawesome.com/82fbcd35e0.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

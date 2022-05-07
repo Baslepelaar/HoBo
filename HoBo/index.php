@@ -1,7 +1,10 @@
 <?php
 require_once 'partial/header.php';
+require_once 'backend/class/Series.php';
 
 include('backend/alert.php');
+
+
 
 ?>
 
@@ -69,4 +72,4 @@ include('backend/alert.php');
 
 <?php
 require_once 'partial/footer.php';
-?>  
+?>

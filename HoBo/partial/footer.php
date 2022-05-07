@@ -38,7 +38,7 @@
             <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 2</a>
           </li>
           <li>
-            <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Contact</a>
+            <a href="contact.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Contact</a>
           </li>
           <li>
             <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 4</a>
