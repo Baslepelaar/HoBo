@@ -1,6 +1,5 @@
 <?php
 require_once 'partial/header.php';
-session_start();
 include('backend/alert.php');
 
 ?>
@@ -18,7 +17,7 @@ include('backend/alert.php');
                             en ervaar de nieuwste films vanuit het comfort van je bank.
                             </p>
                 </article>
-                    <article class="col-md-4 col-sm-2 logofull"><img src="img/logo full.png" class="img-fluid" style="transform: rotate(35deg);">
+                    <article class="col-md-6 col-sm-2 logofull"><img src="img/logo full.png" class="img-fluid" style="transform: rotate(35deg);">
                 </article>
             </article>
         </section>

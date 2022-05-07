@@ -1,32 +1,24 @@
-\<?php
-//$bg = array('bg-01.png', 'bg-02.png', 'bg-03.png', 'bg-04.png', ); // array of filenames
-//
-//$i = rand(0, count($bg)-1); // generate random number size of the array
-//$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+<?php
+    $bg = array('bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg', ); // array of filenames
 
-include('backend/functions.php');
-if(getMaintenance() != '1') {
-    header('Location: index.php');
-}
+    $i = rand(0, count($bg)-1); // generate random number size of the array
+    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 
-//$user_ip = get_client_ip();
-//addIPtoList($user_ip);
-//if(isIPBanned($user_ip)){
-//    header('Location: https://google.com');
-//}
+    require_once 'backend/class/Maintenance.php';
+
+    $maintenance = new Maintenance();
+    if($maintenance->getMaintenance() != '1') {
+        header('Location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Made by MineThemepark -->
 
-    <!-- Meta -->
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-    <meta name="description" content="Follow and explore the newest facts about Minecraft Theme Park server's now." />
-    <meta name="keywords" content="MineThempark, Theme Park, Minecraft, Server, News, pretpark, parkcraft, online, attracties, attractions, follow, login, connect" />
-    <meta name="author" content="MineThemepark">
-    <meta name="robots" content="index" />
-    <meta name="revisit-after" content="1 month" />
+    <meta charset= "utf-8">
+    <meta http-equiv="language" content="NL">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Bas, William, Mathieu">
+    <meta name="keywords" content="Hobo, streaming website, streaming">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/maintenance.css" />
@@ -41,18 +33,17 @@ if(getMaintenance() != '1') {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Icon -->
-    <link rel="icon" href="inc/img/favicon.png" />
+    <link rel="icon" type="image/png" href="img/Logo.png" />
 
-    <title>MineThemepark | Maintenance</title>
+    <title>Hobo | Maintenance</title>
 
     <style type="text/css">
         body.maintenance {
-            background: url(inc/img/background/<?php echo $selectedBg; ?>);
+            background: url(img/<?php echo $selectedBg; ?>);
             background-attachment: fixed;
             background-size: cover;
             background-repeat: no-repeat;
-            position: relative;
-            background-size: cover;
+            position: center;
         }
     </style>
 </head>
@@ -61,7 +52,7 @@ if(getMaintenance() != '1') {
     <div class="maintenance-center">
         <div class="maintenance-content">
             <h2 style="padding-top: 1rem; text-transform: uppercase;"><strong>Maintenance</strong></h2>
-            <h1 style="font-size: 50px;"><strong>MineThemepark</strong></h1>
+            <h1 style="font-size: 50px;"><strong>HoBo</strong></h1>
             <h4 style="padding-top: 1rem; padding-bottom: 1rem; text-transform: uppercase;"><strong><i class="fa fa-clock-o" aria-hidden="true"></i> We will be back soon</strong></h4>
         </div>
     </div>
