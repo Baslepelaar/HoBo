@@ -30,9 +30,21 @@ include('backend/alert.php');
               </article>
               <article class="col-md-5 col-sm-2 filmtekst" style="margin-left: 5vw; margin-top: 5vh;">
               <input type="submit" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="abonnement" value="Begin met kijken">
-      </article>
-    </section>
-  </main>
+              </article>
+              <article class="col-md-12 carousel" style="padding-left:5vw; margin-top: 5vh;">
+              <h1 class="filmtext" style="font-size: 1.5rem; color: white;">Zelfde genre</h1>
+              <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/bg-01.jpg"></div>
+                <div class="item"><img src="img/bg-02.jpg"></div>
+                <div class="item"><img src="img/bg-03.jpg"></div>
+                <div class="item"><img src="img/bg-04.jpg"></div>
+                <div class="item"><img src="img/bg-05.jpg"></div>
+                <div class="item"><img src="img/bg-06.jpg"></div>
+              </div>
+            </article>
+          </article>
+        </section>
+      </main>
 </body>
     <?php } else{ ?>
       <!-- als je niet bent ingelogd dan krijg je de introductie pagina te zien hier beneden -->
@@ -73,3 +85,28 @@ include('backend/alert.php');
 <?php
 require_once 'partial/footer.php';
 ?>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="index.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+<script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+loop:true,
+margin:10,
+nav:true,
+responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:3
+    },
+    1000:{
+        items:5
+    }
+}
+})
+});
+</script>

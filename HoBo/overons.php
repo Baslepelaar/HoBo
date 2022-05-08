@@ -16,7 +16,7 @@ include('backend/alert.php');
                             met nieuwe films. Is er net een nieuwe film uit, maar wil je niet naar de bioscoop? Sluit nu dan een abbonoment aan bij Hobo
                             en ervaar de nieuwste films vanuit het comfort van je bank.
                             </p>
-                </article>
+                    </article>
                     <article class="col-md-6 col-sm-2 logofull"><img src="img/logo full.png" class="img-fluid" style="transform: rotate(35deg);">
                 </article>
             </article>
