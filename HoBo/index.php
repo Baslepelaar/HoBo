@@ -32,14 +32,18 @@ include('backend/alert.php');
               <input type="submit" class="btn btn-primary btn-lg" style="background-color: #02ee5a; border-color: #02ee5a; height: 5vh;" name="abonnement" value="Begin met kijken">
               </article>
               <article class="col-md-12 carousel" style="padding-left:5vw; margin-top: 5vh;">
-              <h1 class="filmtext" style="font-size: 1.5rem; color: white;">Zelfde genre</h1>
+              <h1 class="filmtext" style="font-size: 1.5rem; color: white;">Gallery</h1>
               <div class="owl-carousel owl-theme">
-                <div class="item"><img src="img/bg-01.jpg"></div>
-                <div class="item"><img src="img/bg-02.jpg"></div>
-                <div class="item"><img src="img/bg-03.jpg"></div>
-                <div class="item"><img src="img/bg-04.jpg"></div>
-                <div class="item"><img src="img/bg-05.jpg"></div>
-                <div class="item"><img src="img/bg-06.jpg"></div>
+                <div class="item"><img src="img/image 1.jpg"></div>
+                <div class="item"><img src="img/image 2.jpg"></div>
+                <div class="item"><img src="img/image 3.jpg"></div>
+                <div class="item"><img src="img/image 4.jpg"></div>
+                <div class="item"><img src="img/image 5.jpg"></div>
+                <div class="item"><img src="img/image 6.jpg"></div>
+                <div class="item"><img src="img/image 7.jpg"></div>
+                <div class="item"><img src="img/image 8.jpg"></div>
+                <div class="item"><img src="img/image 9.jpg"></div>
+                <div class="item"><img src="img/image 10.png"></div>
               </div>
             </article>
           </article>
@@ -93,7 +97,7 @@ require_once 'partial/footer.php';
 <script>
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
-loop:true,
+loop:false,
 margin:10,
 nav:true,
 responsive:{
