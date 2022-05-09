@@ -23,9 +23,6 @@
           <li>
             <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Beoordelingen</a>
           </li>
-          <li>
-           <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 4</a>
-          </li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -35,13 +32,7 @@
             <a href="index.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Home</a>
           </li>
           <li>
-            <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 2</a>
-          </li>
-          <li>
             <a href="contact.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Contact</a>
-          </li>
-          <li>
-            <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 4</a>
           </li>
         </ul>
       </div>
@@ -53,12 +44,6 @@
           </li>
           <li>
           <a href="abonnementen.php" class="text-decoration-none" style="font-size: 1rem; color: grey;">Abonnementen</a>
-          </li>
-          <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 3</a>
-          </li>
-          <li>
-          <a href="#!" class="text-decoration-none" style="font-size: 1rem; color: grey;">Link 4</a>
           </li>
         </ul>
       </div>
