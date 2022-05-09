@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f92bfef8-d908-4c5c-bebe-ca91352f4dfa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/class/UserRight.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/class/UserRight.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hobo2022 (1).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partial/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partial/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -64,6 +62,7 @@
       <workItem from="1651226448287" duration="841000" />
       <workItem from="1651920809391" duration="4242000" />
       <workItem from="1651927182954" duration="8081000" />
+      <workItem from="1652076312066" duration="547000" />
     </task>
     <servers />
   </component>

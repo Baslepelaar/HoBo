@@ -51,9 +51,9 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-5">
-                            <div class="box-login" style="border-left: 4px solid #b90303; border-radius: 5px;">
+                            <div class="box-login" style="border-left: 4px solid #02ee5a; border-radius: 5px;">
                                 <p style="font-size: 175%;"><i class="fa fa-lock" aria-hidden="true"></i> Verander uw wachtwoord</p>
-                                <p>Verander uw wachtwoord, wees er zeker van dat het een <span style="color: #b90303;">sterk</span> wachtwoord is.</p>
+                                <p>Verander uw wachtwoord, wees er zeker van dat het een <span style="color: #02ee5a;">sterk</span> wachtwoord is.</p>
                             </div>
                         </div>
                         <div class="col-sm-7">
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-offset-3 col-sm-8">
-                                            <button type="submit" name="verander" class="btn btn-danger">
+                                            <button type="submit" name="verander" class="btn" style="background-color: #02ee5a; color: white;">
                                                 Save
                                             </button>
                                         </div>

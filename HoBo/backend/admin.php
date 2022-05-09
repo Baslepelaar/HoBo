@@ -79,6 +79,9 @@
             <div class="col-sm-9">
                 <?php include('alert.php'); ?>
                 <div class="box-login" >
+                    <h5 style="margin-left: 5%;"><a href="../index.php" class="park-link"><strong><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</strong></a></h5>
+                </div>
+                <div class="box-login" >
                     <h4 style="margin-left: 5%;"><strong>Settings</strong></h4>
                     <center><hr style="width: 90%;"></center>
                     <div style="margin-left: 5%; margin-right: 5%;">
